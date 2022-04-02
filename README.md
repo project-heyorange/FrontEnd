@@ -8,7 +8,7 @@
   
   <a>2. Tecnologias Utilizadas</a>  
   <a>3. Funcionalidades</a>  
-  <a>4. Como utilizar</a> 
+  <a>4. Como utilizar</a>   
   <a>5. Autores</a>
 </div>
 
