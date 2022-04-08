@@ -11,9 +11,9 @@ const Register = () =>{
     const handleChangeName = (e) => setName(e.target.value)
     const handleChangeEmail = (e) => setEmail(e.target.value)
     const handleChangePassword = (e) => setPassword(e.target.value)
-    const handleChangeOption = (e) => {setOption(e.target.value)}
+    const handleChangeOption = (e) => setOption(e.target.value) 
     const handleSubmit = (e) =>{
-        console.log('Deu certo')
+        console.log(name, email, password, option)
         e.preventDefault();
     } 
 
@@ -79,7 +79,8 @@ const Register = () =>{
                         <Input
                             name="option"
                             type="radio"
-                            value={option}
+                            value={"Mentor"}
+                            onChange={handleChangeOption}
                             />
                             {' '}
                             <Label check>Mentor</Label>
@@ -88,7 +89,8 @@ const Register = () =>{
                         <Input
                             name="option"
                             type="radio"
-                            value={option}
+                            value={"Mentorando"}
+                            onChange={handleChangeOption}
                             />
                             {' '}
                             <Label check>Mentorando</Label>
