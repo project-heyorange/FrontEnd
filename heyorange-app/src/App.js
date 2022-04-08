@@ -1,10 +1,10 @@
 import React from "react";
-import Login from "./components/login/login";
+import Register from "./components/cadastro/cadastro";
 
 function App() {
   return (
     <div>
-      <Login/>
+      <Register/>
     </div>
   );
 }

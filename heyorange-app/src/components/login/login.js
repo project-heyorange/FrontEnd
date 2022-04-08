@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from "react";
-import {Label, Input, Form, FormGroup } from "reactstrap";
+import {Button, Label, Input, Form, FormGroup } from "reactstrap";
 
 const Login = () =>{
     
@@ -14,9 +14,14 @@ const Login = () =>{
 
     return(
         <Fragment>
-           <Form onSubmit={handleSubmit}>
-                <FormGroup>
-                    <Label for="email">Email</Label>
+            <Form inline onSubmit={handleSubmit}>
+                <FormGroup className="mb-2 me-sm-2 mb-sm-0">
+                    <Label
+                    className="me-sm-2"
+                    for="email"
+                    >
+                    Email
+                    </Label>
                     <Input
                     id="email"
                     name="email"
@@ -26,18 +31,23 @@ const Login = () =>{
                     onChange={handleChange}
                     />
                 </FormGroup>
-                <FormGroup>
-                    <Label for="password">Senha</Label>
+                <FormGroup className="mb-2 me-sm-2 mb-sm-0">
+                    <Label
+                    className="me-sm-2"
+                    for="password"
+                    >
+                    Password
+                    </Label>
                     <Input
                     id="password"
                     name="password"
-                    placeholder="Insira sua senha"
+                    placeholder="Insira sua senha aqui"
                     type="password"
                     value={password}
                     onChange={handleChangePassword}
                     />
                 </FormGroup>
-                <Input type="submit"/>
+                <Button>Login</Button>
             </Form>
         </Fragment>
     )
