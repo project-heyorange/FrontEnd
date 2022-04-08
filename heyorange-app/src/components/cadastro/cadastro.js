@@ -1,96 +1,130 @@
-import React, {Fragment, useState} from "react";
-import {Button, Col, Label, Input, Form, FormGroup } from "reactstrap";
+import React, { useState } from "react";
+import { Button, Col, Label, Input, Form, FormGroup } from "reactstrap";
+import FloatingLabel from "react-bootstrap-floating-label";
 
-const Register = () =>{
+const Register = () => {
+
     const [name, setName] = useState('')
+
     const [email, setEmail] = useState('')
+
     const [password, setPassword] = useState('')
+
     const [option, setOption] = useState('')
 
 
-    const handleChangeName = (e) => setName(e.target.value)
-    const handleChangeEmail = (e) => setEmail(e.target.value)
-    const handleChangePassword = (e) => setPassword(e.target.value)
-    const handleChangeOption = (e) => setOption(e.target.value) 
-    const handleSubmit = (e) =>{
-        console.log(name, email, password, option)
+    const handleChangeName = ({ target: { value } }) => {
+        setName(value)
+    }
+    const handleChangeEmail = ({ target: { value } }) => {
+        setEmail(value)
+    }
+    const handleChangePassword = ({ target: { value } }) => {
+        setPassword(value)
+    }
+    const handleChangeOption = ({ target: { value } }) => {
+        setOption(value)
+    }
+    const handleSubmit = (e) => {
         e.preventDefault();
-    } 
+        console.log(name, email, password, option)
 
-    return(
-        <Fragment>
-           <Form inline onSubmit={handleSubmit}>
-            <FormGroup className="mb-2 me-sm-2 mb-sm-0">
-                    <Label
-                    className="me-sm-2"
-                    for="name"
+    }
+
+    return (
+        <>
+            <h1>Cadastre-se!</h1><br/>
+            {/* Input para o Nome */}
+            <Form inline onSubmit={handleSubmit}>
+                <FormGroup floating>
+                    <FloatingLabel
+                        label="Nome"
+                        className="me-sm-2"
+                        for="name"
                     >
-                    Nome Completo
-                    </Label>
-                    <Input
-                    id="name"
-                    name="name"
-                    placeholder="Insira seu nome"
-                    type="text"
-                    value={name}
-                    onChange={handleChangeName}
-                    />
+                        <Input
+                            id="name"
+                            name="name"
+                            type="text"
+                            value={name}
+                            onChange={handleChangeName}
+                        />
+                    </FloatingLabel>
                 </FormGroup>
-                <FormGroup className="mb-2 me-sm-2 mb-sm-0">
-                    <Label
-                    className="me-sm-2"
-                    for="email"
+
+                {/* Input para o Email */}
+                <FormGroup>
+                    <FloatingLabel
+                        label="Email"
+                        className="me-sm-2"
+                        for="email"
                     >
-                    Email
-                    </Label>
-                    <Input
-                    id="email"
-                    name="email"
-                    placeholder="Digite seu email"
-                    type="email"
-                    value={email}
-                    onChange={handleChangeEmail}
-                    />
+                        <Input
+                            id="email"
+                            name="email"
+                            type="email"
+                            value={email}
+                            onChange={handleChangeEmail}
+                        />
+                    </FloatingLabel>
                 </FormGroup>
-                <FormGroup className="mb-2 me-sm-2 mb-sm-0">
-                    <Label
-                    className="me-sm-2"
-                    for="password"
+                {/* Confirmação de Email */}
+                <FormGroup>
+                    <FloatingLabel
+                        label="Confirmar Email"
+                        className="me-sm-2"
+                        for="confirmeEmail"
                     >
-                    Password
-                    </Label>
-                    <Input
-                    id="password"
-                    name="password"
-                    placeholder="Insira sua senha"
-                    type="password"
-                    value={password}
-                    onChange={handleChangePassword}
-                    />
+                        <Input
+                            id="confirmeEmail"
+                            name="confirmeEmail"
+                            type="confirmeEmail"
+                            
+                            
+                        />
+                    </FloatingLabel>
+                </FormGroup>
+
+
+                <FormGroup floating className="mb-2 me-sm-2 mb-sm-0">
+                    <FloatingLabel
+                        label="Crie sua Senha"
+                        className="me-sm-2"
+                        for="password"
+                    >
+                        <Input
+                            id="password"
+                            name="password"
+                            type="password"
+                            value={password}
+                            onChange={handleChangePassword}
+                        />
+
+                    </FloatingLabel>
                 </FormGroup>
 
                 {/* Seleção de Mentor ou Mentorando */}
                 <FormGroup row tag="fieldset">
-                        <legend className="col-form-label col-sm-2">
-                            Escolha uma opção:
-                        </legend>
+                    <legend className="col-form-label col-sm-2">
+                        Escolha uma opção:
+                    </legend>
                     <Col sm={5}>
                         <FormGroup check>
-                        <Input
-                            name="option"
-                            type="radio"
-                            value={"Mentor"}
-                            onChange={handleChangeOption}
+                            <Input
+                                name="option"
+                                type="radio"
+                                value={"Mentor"}
+                                onChange={handleChangeOption}
                             />
                             {' '}
                             <Label check>Mentor</Label>
                         </FormGroup>
                         <FormGroup check>
-                        <Input
-                            name="option"
-                            type="radio"
-                            value={"Mentorando"}
-                            onChange={handleChangeOption}
+                            <Input
+                                name="option"
+                                type="radio"
+                                value={"Mentorando"}
+                                onChange={handleChangeOption}
                             />
                             {' '}
                             <Label check>Mentorando</Label>
@@ -98,12 +132,13 @@ const Register = () =>{
                     </Col>
                 </FormGroup>
                 <FormGroup>
+                    <br/>
                     <Button>Cadastrar</Button>
-                </FormGroup>  
+                </FormGroup>
             </Form>
-        </Fragment>
+        </>
     )
-    
+
 }
 
 export default Register;
