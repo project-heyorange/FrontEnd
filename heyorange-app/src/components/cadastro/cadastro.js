@@ -5,9 +5,13 @@ const Register = () =>{
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [option, setOption] = useState('')
+
+
     const handleChangeName = (e) => setName(e.target.value)
     const handleChangeEmail = (e) => setEmail(e.target.value)
     const handleChangePassword = (e) => setPassword(e.target.value)
+    const handleChangeOption = (e) => {setOption(e.target.value)}
     const handleSubmit = (e) =>{
         console.log('Deu certo')
         e.preventDefault();
@@ -35,12 +39,12 @@ const Register = () =>{
                 <FormGroup className="mb-2 me-sm-2 mb-sm-0">
                     <Label
                     className="me-sm-2"
-                    for="exampleEmail"
+                    for="email"
                     >
                     Email
                     </Label>
                     <Input
-                    id="exampleEmail"
+                    id="email"
                     name="email"
                     placeholder="Digite seu email"
                     type="email"
@@ -51,12 +55,12 @@ const Register = () =>{
                 <FormGroup className="mb-2 me-sm-2 mb-sm-0">
                     <Label
                     className="me-sm-2"
-                    for="examplePassword"
+                    for="password"
                     >
                     Password
                     </Label>
                     <Input
-                    id="examplePassword"
+                    id="password"
                     name="password"
                     placeholder="Insira sua senha"
                     type="password"
@@ -64,6 +68,8 @@ const Register = () =>{
                     onChange={handleChangePassword}
                     />
                 </FormGroup>
+
+                {/* Seleção de Mentor ou Mentorando */}
                 <FormGroup row tag="fieldset">
                         <legend className="col-form-label col-sm-2">
                             Escolha uma opção:
@@ -71,23 +77,24 @@ const Register = () =>{
                     <Col sm={5}>
                         <FormGroup check>
                         <Input
-                            name="radio2"
+                            name="option"
                             type="radio"
+                            value={option}
                             />
                             {' '}
                             <Label check>Mentor</Label>
                         </FormGroup>
                         <FormGroup check>
                         <Input
-                            name="radio2"
+                            name="option"
                             type="radio"
+                            value={option}
                             />
                             {' '}
                             <Label check>Mentorando</Label>
                         </FormGroup>
                     </Col>
                 </FormGroup>
-                
                 <FormGroup>
                     <Button>Cadastrar</Button>
                 </FormGroup>  
