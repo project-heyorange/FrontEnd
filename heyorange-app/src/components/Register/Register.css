@@ -1,0 +1,13 @@
+.register-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    width: 100%;
+    padding: 128px 16px;
+    margin: 0 auto;
+}
+
+.form-container {
+    max-width: 344px;
+    margin: 0 auto;
+}
