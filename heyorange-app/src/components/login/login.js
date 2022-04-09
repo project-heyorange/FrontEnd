@@ -1,6 +1,7 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { Button, Input, Form, FormGroup } from "reactstrap";
 import FloatingLabel from "react-bootstrap-floating-label";
+import "./login.css"
 
 const Login = () => {
 
@@ -22,45 +23,51 @@ const Login = () => {
     }
 
     return (
-        <Fragment>
-            <Form inline onSubmit={handleSubmit}>
-                {/* Login Nome */}
-                <FormGroup>
-                    <FloatingLabel
-                        label="Email"
-                        className="me-sm-2"
-                        for="email"
-                    >
-                        <Input
-                            id="email"
-                            name="email"
-                            type="email"
-                            value={email}
-                            onChange={handleChangeEmail}
-                        />
-                    </FloatingLabel>
-                </FormGroup>
-                {/* Login Senha */}
-                <FormGroup floating className="mb-2 me-sm-2 mb-sm-0">
-                    <FloatingLabel
-                        label="Senha"
-                        className="me-sm-2"
-                        for="password"
-                    >
-                        <Input
-                            id="password"
-                            name="password"
-                            type="password"
-                            value={password}
-                            onChange={handleChangePassword}
-                        />
+        <>
+            <div className="container">
+                <Form inline onSubmit={handleSubmit}>
+                    {/* Login Nome */}
+                    <FormGroup>
+                        <FloatingLabel
+                            label="Email"
+                            className="input"
+                            for="email"
+                        >
+                            <Input
+                                // className="w-15"
+                                id="email"
+                                name="email"
+                                type="email"
+                                value={email}
+                                onChange={handleChangeEmail}
+                            />
+                        </FloatingLabel><br/>
+                    </FormGroup>
+                    {/* Login Senha */}
+                    <FormGroup floating className="mb-2 me-sm-2 mb-sm-0">
+                        <FloatingLabel
+                            label="Senha"
+                            className="input"
+                            for="password"
+                        >
+                            <Input
+                                id="password"
+                                name="password"
+                                type="password"
+                                value={password}
+                                onChange={handleChangePassword}
+                            />
 
-                    </FloatingLabel>
-                </FormGroup>
-                <br/>
-                <Button>Login</Button>
-            </Form>
-        </Fragment>
+                        </FloatingLabel>
+                    </FormGroup>
+                    <br />
+                    <Button outline className="button">Entrar</Button><br/><br/>
+
+                    <a href="" target="_blank">Esqueceu a senha?</a>
+
+                </Form>
+            </div>
+        </>
     )
 }
 

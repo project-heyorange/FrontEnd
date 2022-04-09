@@ -1,11 +1,13 @@
 import React from "react";
-import Register from "./components/cadastro/cadastro";
-import Login from "./components/login/login";
+// import Register from "./components/cadastro/cadastro";
+// import Login from "./components/login/login";
+
+import Register from "./components/Register"
 
 function App() {
   return (
     <div>
-      <Login/><br/>
+      <Register/><br/>
       <hr/>
       
     </div>
