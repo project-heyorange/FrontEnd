@@ -1,16 +1,31 @@
-import { Button } from "reactstrap"
+import { Button, FormGroup } from "reactstrap"
 import React from "react"
-import Checkbox from "../Checkbox"
+import RadioButton from "../RadioButton"
 
-const Step1 = ({ prevStep, nextStep }) => {
+const Step1 = ({ prevStep }) => {
     return (
         <div>
-            <Checkbox/>
+            <FormGroup>
+                <legend>
+                    Qual seu nivel de experiência?
+                </legend>
+                <RadioButton name="nivelExperiencia" label="Trainee" value="trainee" />
+                <RadioButton name="nivelExperiencia" label="Junior" value="junior" />
+                <RadioButton name="nivelExperiencia" label="Pleno" value="pleno" />
+                <RadioButton name="nivelExperiencia" label="Senior" value="senior" />
+            </FormGroup>
+            <FormGroup>
+                <legend>
+                    Que área você atua?
+                </legend>
+                <RadioButton name="area" label="Desenvolvedor" value="desenvolvedor" />
+                <RadioButton name="area" label="Design" value="design" />
+            </FormGroup>
             <Button onClick={prevStep}>
                 Voltar
             </Button>
-            <Button onClick={nextStep}>
-                Prximo
+            <Button type="submit">
+                Próximo
             </Button>
         </div>
     )

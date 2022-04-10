@@ -1,15 +1,16 @@
 import { Button } from "reactstrap"
 import React from "react"
+import RadioButton from "../RadioButton"
 
-const Step2 = ({ prevStep, nextStep }) => {
+const Step2 = ({ prevStep, loading }) => {
     return (
         <div>
-            Step 2
-            <Button onClick={prevStep}>
+            step 2
+            <Button onClick={prevStep} disabled={loading}>
                 Voltar
             </Button>
-            <Button onClick={nextStep}>
-                Prximo
+            <Button type="submit" disabled={loading}>
+                {loading ? "Carregando..." : "Próximo"}
             </Button>
         </div>
     )

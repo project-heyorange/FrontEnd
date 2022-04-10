@@ -3,16 +3,16 @@ import { Input, Label, FormGroup } from "reactstrap";
 
 import { useField } from "formik"
 
-const Checkbox = ({ name, label, ...props }) => {
+const RadioButton = ({ name, label, ...props }) => {
     const [field, meta] = useField(name);
     return (
-        <FormGroup check inline>
+        <FormGroup check>
             <Input
                 {...field}
                 {...props}
-                invalid={meta.error && meta.touched}
-                type="checkbox"
-                checked={field.value}
+                invalid={meta.error}
+                type="radio"
+                checked={field.value ? field.value === props.value : false}
             />
             <Label check for={name}>
                 {label}
@@ -21,4 +21,4 @@ const Checkbox = ({ name, label, ...props }) => {
     );
 };
 
-export default Checkbox;
+export default RadioButton;

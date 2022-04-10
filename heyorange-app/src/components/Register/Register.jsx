@@ -5,28 +5,17 @@ import "./Register.css"
 import { Formik, Form } from "formik"
 import { object, string, ref, bool } from "yup";
 import Input from "../Input";
-import { Button } from "reactstrap"
+import { Button, Progress } from "reactstrap"
 import Checkbox from "../Checkbox";
 
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 
-const RegisterValidation = object().shape({
-    name: string().required("Campo obrigatório"),
-    email: string()
-        .required("Digite seu email")
-        .email("Email inválido"),
-    password: string().min(8, "Pelo menos 8 caracteres").required("Campo Obrigatório"),
-    confirmPassword: string()
-        .required("Confirme sua senha")
-        .oneOf([ref("password")], "As senhas não conferem"),
-    accepted: bool().oneOf([true], 'Aceite os termos e condições')
-});
-
 const Register = () => {
     const [showRegister, setShowRegister] = useState(true)
     const [step, setStep] = useState(0)
+    const [loading, setLoading] = useState(false)
 
     const backToRegister = () => {
         setShowRegister(true)
@@ -44,19 +33,35 @@ const Register = () => {
         setStep(step => step + 1)
     }
 
-    const handleSubmit = (values) => {
-        console.log(values)
+    const requestToBack = async () => {
+        setLoading(true)
+        await new Promise(resolve => setTimeout(resolve, 5000));
+        setLoading(false)
     }
 
-    const registerContainer = ({ isValid, validateForm, setTouched , submitForm}) => (
+    const handleSubmit = async (values) => {
+        if (showRegister) {
+            startSteps()
+            return
+        }
+
+        if (step === 1) {
+            await requestToBack()
+            console.log("Ultimo step ", values)
+        }
+
+        setStep(step => step + 1)
+    }
+
+    const registerContainer = ({ isValid }) => (
         <>
-            <div className="Title">
+            <h2 className="Title">
                 Bem-vindo!
-            </div>
+            </h2>
             <Input name="name" label="Nome" />
             <Input name="email" label="Email" />
             <Input name="password" label="Senha" type="password" />
-            <Input 
+            <Input
                 name="confirmPassword"
                 label="Confirmar Senha"
                 type="password"
@@ -64,22 +69,8 @@ const Register = () => {
             <Checkbox name="accepted" label="Eu concordo com os Termos de Uso" />
             <div>
                 <Button className="CreateAccBtn"
-                    onClick={() => {
-                        // submitForm()
-                        //     .then((errors) => {
-                        //         console.log("teste", errors)
-                        //     })
-                        // console.log(setTouched)
-                        // setTouched()
-                        // validateForm().then((errors) => {
-                        //     if (Object.keys(errors).length === 0 && errors.constructor === Object) {
-                        //         startSteps()
-                        //     }
-                        // })
-                        startSteps()
-                    }}
                     disabled={!isValid}
-                    type="button"
+                    type="submit"
                 >
                     CRIAR CONTA
                 </Button>
@@ -87,9 +78,22 @@ const Register = () => {
         </>
     )
 
+    const RegisterValidation = object().shape({
+        name: string().required("Campo obrigatório"),
+        email: string()
+            .required("Digite seu email")
+            .email("Email inválido"),
+        password: string().min(8, "Pelo menos 8 caracteres").required("Campo Obrigatório"),
+        confirmPassword: string()
+            .required("Confirme sua senha")
+            .oneOf([ref("password")], "As senhas não conferem"),
+        accepted: bool().oneOf([true], 'Aceite os termos e condições'),
+        nivelExperiencia: showRegister ? string() : string().required("Teste")
+    });
+
     return (
         <div className="register-container">
-           <div className="HomeImg"></div>
+            <img src="https://via.placeholder.com/660" className="HomeImg" />
             <Formik
                 initialValues={{
                     name: "",
@@ -101,15 +105,20 @@ const Register = () => {
                 onSubmit={handleSubmit}
                 validationSchema={RegisterValidation}
             >
-                {({ isValid, validateForm, setTouched, submitForm }) => {
+                {({ isValid }) => {
                     return (
                         <Form className="form-container">
                             {showRegister && registerContainer({ isValid })}
-                            {!showRegister && {
-                                0: <Step1 prevStep={backToRegister} nextStep={nextStep} />,
-                                1: <Step2 prevStep={prevStep} nextStep={nextStep} />,
-                                2: <Step3 prevStep={prevStep} nextStep={nextStep} />
-                            }[step]}
+                            {!showRegister && (
+                                <div>
+                                    <Progress value={[33, 66, 100][step]} />
+                                    {{
+                                        0: <Step1 prevStep={backToRegister} />,
+                                        1: <Step2 prevStep={prevStep} loading={loading} />,
+                                        2: <Step3 />
+                                    }[step]}
+                                </div>)
+                            }
                         </Form>
                     );
                 }}
