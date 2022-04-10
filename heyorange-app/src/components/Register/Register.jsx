@@ -50,20 +50,20 @@ const Register = () => {
 
     const registerContainer = ({ isValid, validateForm, setTouched , submitForm}) => (
         <>
-            <h2>
+            <div className="Title">
                 Bem-vindo!
-            </h2>
-            <Input name="name" label="Name" />
-            <Input name="email" label="Email" />
-            <Input name="password" label="Password" type="password" />
-            <Input
+            </div>
+            <Input className= "FormInput" name="name" label="Nome" />
+            <Input className= "FormInput"  name="email" label="Email" />
+            <Input className= "FormInput"  name="password" label="Senha" type="password" />
+            <Input className= "FormInput" 
                 name="confirmPassword"
-                label="Confirm Password"
+                label="Confirmar Senha"
                 type="password"
             />
-            <Checkbox name="accepted" label="Aceito os termos e condições." />
+            <Checkbox name="accepted" label="Eu concordo com os Termos de Uso" />
             <div>
-                <Button
+                <Button className="CreateAccBtn"
                     onClick={() => {
                         // submitForm()
                         //     .then((errors) => {
@@ -89,7 +89,7 @@ const Register = () => {
 
     return (
         <div className="register-container">
-            <img src="https://via.placeholder.com/660" />
+           <div className="HomeImg"></div>
             <Formik
                 initialValues={{
                     name: "",
