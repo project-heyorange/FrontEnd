@@ -1,13 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Title {
+    text-align: center;
+    width: 307px;
+    height: 43px;
+    left: 930px;
+    top: 200px;
+    margin-bottom: 8px;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 40px;
+
+}
+
 .register-container {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 1440px;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     padding: 128px 16px;
     margin: 0 auto;
+    background-color: #fff;
+}
+
+
+.HomeImg {
+    display: flex;
+    width: 592px;
+    height: 660px;
+    margin-top: 58px;
+    margin-left: 112px;
+    margin-bottom: 156px;
+    border-radius: 24px;
+    background-color: #7E7E7E;
+    padding: 20px;
+    background-repeat: no-repeat;
 }
 
 .form-container {
-    max-width: 344px;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 592px;
+    height: 600px;
+    margin-top: -160px;
+    
+}
+
+.FormInput  {
+    width: 344px;
+    height: 48px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: #e1e1e1;
+    border-radius: 4px;
+    border: none;
+    padding: 24px;
+}
+
+.CreateAccBtn {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    width: 343px;
+    height: 48px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 16px;
 }
