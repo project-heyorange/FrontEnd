@@ -1,10 +1,11 @@
 import { Button } from "reactstrap"
 import React from "react"
+import Checkbox from "../Checkbox"
 
 const Step1 = ({ prevStep, nextStep }) => {
     return (
         <div>
-            Step 1
+            <Checkbox/>
             <Button onClick={prevStep}>
                 Voltar
             </Button>

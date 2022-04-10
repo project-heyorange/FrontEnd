@@ -1,13 +1,14 @@
 import React from "react"
 import { Input as InputReactStrap, Label, FormFeedback, FormGroup } from "reactstrap";
-
 import { useField, ErrorMessage } from "formik"
+import "./Input.css";
 
 const Input = ({ name, label, ...props }) => {
     const [field, meta] = useField(name);
     return (
         <FormGroup floating>
-            <InputReactStrap
+            <InputReactStrap 
+            className="input"
                 {...field}
                 {...props}
                 invalid={meta.error && meta.touched}

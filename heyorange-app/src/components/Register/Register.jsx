@@ -53,10 +53,10 @@ const Register = () => {
             <div className="Title">
                 Bem-vindo!
             </div>
-            <Input className= "FormInput" name="name" label="Nome" />
-            <Input className= "FormInput"  name="email" label="Email" />
-            <Input className= "FormInput"  name="password" label="Senha" type="password" />
-            <Input className= "FormInput" 
+            <Input name="name" label="Nome" />
+            <Input name="email" label="Email" />
+            <Input name="password" label="Senha" type="password" />
+            <Input 
                 name="confirmPassword"
                 label="Confirmar Senha"
                 type="password"
