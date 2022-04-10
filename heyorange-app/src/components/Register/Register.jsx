@@ -40,6 +40,7 @@ const Register = () => {
     }
 
     const handleSubmit = async (values) => {
+        console.log(values)
         if (showRegister) {
             startSteps()
             return
@@ -83,13 +84,21 @@ const Register = () => {
         email: string()
             .required("Digite seu email")
             .email("Email inválido"),
-        password: string().min(8, "Pelo menos 8 caracteres").required("Campo Obrigatório"),
+        password: string().min(2, "Pelo menos 2 caracteres").required("Campo Obrigatório"),
         confirmPassword: string()
             .required("Confirme sua senha")
             .oneOf([ref("password")], "As senhas não conferem"),
         accepted: bool().oneOf([true], 'Aceite os termos e condições'),
-        nivelExperiencia: showRegister ? string() : string().required("Teste")
     });
+
+    const StepsValidation = [object().shape({
+        nivelExperiencia: string().required("Teste"),
+        area: string().required("Teste"),
+    }), object().shape({
+        habilidade1: string().required("Teste"),
+        habilidade2: string().required("teste"),
+        habilidade3: string().required("teste"),
+    }), object().shape({})]
 
     return (
         <div className="register-container">
@@ -100,10 +109,15 @@ const Register = () => {
                     email: "",
                     password: "",
                     confirmPassword: "",
-                    accepted: false
+                    accepted: false,
+                    nivelExperiencia: "",
+                    area: "",
+                    habilidade1: "",
+                    habilidade2: "",
+                    habilidade3: ""
                 }}
                 onSubmit={handleSubmit}
-                validationSchema={RegisterValidation}
+                validationSchema={showRegister ? RegisterValidation : StepsValidation[step]}
             >
                 {({ isValid }) => {
                     return (
@@ -111,7 +125,9 @@ const Register = () => {
                             {showRegister && registerContainer({ isValid })}
                             {!showRegister && (
                                 <div>
-                                    <Progress value={[33, 66, 100][step]} />
+
+                                    <Progress color="warning" value={[33, 66, 100][step]} /><br />
+
                                     {{
                                         0: <Step1 prevStep={backToRegister} />,
                                         1: <Step2 prevStep={prevStep} loading={loading} />,

@@ -13,6 +13,7 @@ const Input = ({ name, label, ...props }) => {
                 {...props}
                 invalid={meta.error && meta.touched}
                 placeholder={props.placeholder || "placeholder"}
+    
             />
             <Label for={name}>
                 {label}
