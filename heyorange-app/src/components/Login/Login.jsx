@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import { Formik, Form } from "formik"
 import { object, string } from "yup";
 import { Button } from "reactstrap";
-import "./login.css"
+import "./login.css";
 import Input from "../Input";
+import { Link } from "react-router-dom";
 
 const LoginValidation = object().shape({
     email: string()
@@ -29,15 +30,25 @@ const Login = () => {
         >
             {() => {
                 return (
+                 
+                    <div className="register-container">
+                  
+            <img src="https://via.placeholder.com/660" className="HomeImg" />
+            
                     <Form>
+                    <h2 className="Title">
+                Bem-vindo!
+                    </h2>
                         <Input name="email" label="Email" />
-                        <Input name="password" label="Password" type="password" />
+                        <Input name="password" label="Senha" type="password" />
                         <div>
-                            <Button outline type="submit">Entrar</Button>
+                            <Button className="LogInBtn" outline type="submit">Entrar</Button>
                         </div>
-                        <a href="/" target="_blank">Esqueceu a senha?</a>
+                        <a href="/" target="_blank"><center><br/>Esqueceu a senha?</center></a>
+                        <hr />
+                        <Link to="/register"><button className="CreateAcc">CRIAR CONTA</button></Link>
 
-                    </Form>
+                    </Form></div>
                 )
             }}
         </Formik>

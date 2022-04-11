@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "../pages/home/Home";
+import Login from "../components/Login";
+import Register from "../components/Register";
 
 // eslint-disable-next-line
 const Router = () => {
@@ -18,6 +20,8 @@ const Router = () => {
       <ScrollToTop />
       <Routes>
         <Route path={"/"} element={<Home />} />
+        <Route path={"/login"} element={<Login />} />
+        <Route path={"/register"} element={<Register />} />
       </Routes>
     </BrowserRouter>
   );
