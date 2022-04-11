@@ -3,25 +3,40 @@
     padding: 0;
 }
 
-.container{
-    border: 1px solid black;
-    padding: 2%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.form-container {
-    max-width: 400px;
-    width: 100%;
-}
-
-.LoginBtn{
-    width: 100%;
-    font-weight: 700;
-    font-size: 14px;
+.input{
+    background-color: #E1E1E1;
+    width: 384px;
     height: 48px;
-    border: 1px solid #000000;
+}
+
+.LogInBtn {
+    color: white;
+    width: 384px;
+    height: 48px;
+    background-color: #7e7e7e;
     border-radius: 4px;
-    margin-top: 16px;
+    font-weight: bold;
+}
+
+.CreateAcc {
+    font-size: 16px;
+    font-weight: bold;
+    color: #7E7E7E;
+    width: 384px;
+    height: 48px;
+    background-color: white;
+    border: 1px solid #7E7E7E;
+    border-radius: 4px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: #7E7E7E;
+}
+
+hr {
+    border: 1px solid #7E7E7E;
 }
