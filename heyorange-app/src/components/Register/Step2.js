@@ -8,26 +8,26 @@ const Step2 = ({ prevStep, loading }) => {
             <h2 className="Title">Conte um pouco mais sobre você</h2>
             <p></p>
             <br/>
-            <h5><strong>Digite até 3 Habilidades que você possuí (Exemplo: UI, Java, UX, Wireframe, AI, Angular, etc...)</strong></h5><br/>
+            <h6><strong>Digite até 3 Habilidades que você possuí (Exemplo: UI, Java, UX, Wireframe, AI, Angular, etc...)</strong></h6><br/>
 
             <FormGroup>
                 <Input
                     name="habilidade1"
-                    className="mb-3"
+                    className="input"
                 />
                 <Input
                     name="habilidade2"
-                    className="mb-3"
+                    className="input"
                 />
                 <Input
                     name="habilidade3"
-                    className="mb-3"
+                    className="input"
                 />
             </FormGroup>
-            <Button onClick={prevStep} disabled={loading}>
+            <Button className="PrevBtn" onClick={prevStep} disabled={loading}>
                 Voltar
             </Button>
-            <Button type="submit" disabled={loading}>
+            <Button className="NextBtn" type="submit" disabled={loading}>
                 {loading ? "Carregando..." : "Próximo"}
             </Button>
         </div>

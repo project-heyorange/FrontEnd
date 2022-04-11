@@ -1,33 +1,23 @@
 import React from "react";
 
-
-
 import { Card, CardHeader, Nav, NavItem, NavLink } from "reactstrap";
 
-import "./Header.css"
+import "./Header.css";
 
 const Header = () => {
     return (
-        <Card className="header">
-            <CardHeader>
-                <Nav pills>
-
-                    <NavItem>
-                        <h5> 👨‍💻 Olá Eduardo</h5>
+        <Card>
+            <CardHeader className="Header">
+                {/* <Nav className="HeaderItems"> */}
+                    <NavItem className="ProfileName">
+                        <h5 className="ProfileTitle"> 👤 Olá Eduardo</h5>
                     </NavItem>
 
                     <NavItem className="header-links">
-                            <h5>Agenda</h5>
+                        <a className="Nav-links" href="#"> Agenda</a>
+                        <a className="Nav-links" href="#">Sair</a>
                     </NavItem>
-
-                    <NavItem className="header-links"> 
-                        <NavLink href="#">
-                        <h5>Sair</h5>
-                        </NavLink>
-                    </NavItem>
-    
-                </Nav>
-
+                    {/* </Nav> */}
             </CardHeader>
 
         </Card>
