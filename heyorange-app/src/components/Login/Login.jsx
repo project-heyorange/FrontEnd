@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+
+import { Navigate } from "react-router-dom";
 
 import { Formik, Form } from "formik"
 import { object, string } from "yup";
@@ -53,6 +55,7 @@ const Login = () => {
             }}
         </Formik>
     )
+
 }
 
 export default Login;

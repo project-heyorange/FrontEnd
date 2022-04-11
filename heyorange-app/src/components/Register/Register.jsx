@@ -29,10 +29,6 @@ const Register = () => {
         setStep(step => step - 1)
     }
 
-    const nextStep = () => {
-        setStep(step => step + 1)
-    }
-
     const requestToBack = async () => {
         setLoading(true)
         await new Promise(resolve => setTimeout(resolve, 5000));
@@ -95,7 +91,7 @@ const Register = () => {
         nivelExperiencia: string().required("Teste"),
         area: string().required("Teste"),
     }), object().shape({
-        habilidade1: string().required("Campo obrigatório"),
+        habilidade1: string().required("Campo Obrigatório"),
         habilidade2: string(),
         habilidade3: string(),
     }), object().shape({})]
