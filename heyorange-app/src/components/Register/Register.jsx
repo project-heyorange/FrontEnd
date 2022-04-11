@@ -122,7 +122,7 @@ const Register = () => {
                             {!showRegister && (
                                 <div>
 
-                                    <Progress color="warning" value={[33, 66, 100][step]} /><br />
+                                    <Progress color="warning" value={[33, 66, 100][step]} /><br /><br />
 
                                     {{
                                         0: <Step1 prevStep={backToRegister} />,
