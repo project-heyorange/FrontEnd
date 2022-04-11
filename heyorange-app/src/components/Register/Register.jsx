@@ -95,9 +95,9 @@ const Register = () => {
         nivelExperiencia: string().required("Teste"),
         area: string().required("Teste"),
     }), object().shape({
-        habilidade1: string().required("Teste"),
-        habilidade2: string().required("teste"),
-        habilidade3: string().required("teste"),
+        habilidade1: string().required("Campo obrigatório"),
+        habilidade2: string(),
+        habilidade3: string(),
     }), object().shape({})]
 
     return (
@@ -126,7 +126,7 @@ const Register = () => {
                             {!showRegister && (
                                 <div>
 
-                                    <Progress color="warning" value={[33, 66, 100][step]} /><br />
+                                    <Progress color="warning" value={[33, 66, 100][step]} /><br /><br />
 
                                     {{
                                         0: <Step1 prevStep={backToRegister} />,

@@ -1,15 +1,16 @@
 import { Button, FormGroup, Progress} from "reactstrap"
 import React from "react"
 import RadioButton from "../RadioButton"
+import "./Register.css";
 
 const Step1 = ({ prevStep }) => {
     return (
         <div>
             <FormGroup>
-                <h2>Conte um pouco mais sobre você</h2>
-                <p></p>
+                <h2 className="Title">Conte um pouco mais sobre você</h2>
+                <p></p><br/>
                 <legend>
-                    Qual seu nivel de experiência?
+                    <strong>Qual seu nivel de experiência?</strong>
                 </legend>
                
                 <RadioButton name="nivelExperiencia" label="Trainee" value="trainee" />
@@ -19,7 +20,7 @@ const Step1 = ({ prevStep }) => {
             </FormGroup>
             <FormGroup>
                 <legend>
-                    Que área você atua?
+                    <strong>Que área você atua?</strong>
                 </legend>
                 <RadioButton name="area" label="Desenvolvedor" value="desenvolvedor" />
                 <RadioButton name="area" label="Design" value="design" />

@@ -5,11 +5,11 @@ import Input from "../Input"
 const Step2 = ({ prevStep, loading }) => {
     return (
         <div>
-            <h2>Conte um pouco mais sobre você</h2>
+            <h2 className="Title">Conte um pouco mais sobre você</h2>
             <p></p>
-            <p>
-                Digite até 3 Habilidades que você possuí (Exemplo: UI, Java, UX, Wireframe, AI, Angular, etc...)
-            </p>
+            <br/>
+            <h5><strong>Digite até 3 Habilidades que você possuí (Exemplo: UI, Java, UX, Wireframe, AI, Angular, etc...)</strong></h5><br/>
+
             <FormGroup>
                 <Input
                     name="habilidade1"
