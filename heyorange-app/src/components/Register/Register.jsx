@@ -11,6 +11,7 @@ import Checkbox from "../Checkbox";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
+import MainImage from "../MainImage";
 
 const Register = () => {
     const [showRegister, setShowRegister] = useState(true)
@@ -98,7 +99,7 @@ const Register = () => {
 
     return (
         <div className="register-container">
-            <img src="https://via.placeholder.com/660" className="HomeImg" />
+            <MainImage/>
             <Formik
                 initialValues={{
                     name: "",

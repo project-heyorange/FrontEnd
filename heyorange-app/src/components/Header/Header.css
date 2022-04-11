@@ -2,12 +2,13 @@
     font-size: 18px;
     background:#DEDEDE!important;
     width: 100%;
-    max-width: 1980px;
+    /* max-width: 1980px; */
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style-type: none;
     border: none !important;
+    position: fixed;
     
 }
 .ProfileTitle {
