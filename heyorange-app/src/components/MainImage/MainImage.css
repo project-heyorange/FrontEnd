@@ -1,0 +1,16 @@
+.image {
+    /* display: flex;
+    align-items: flex-start; */
+    width: 584px;
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/616838/pexels-photo-616838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    margin-left: 128px;
+}
+
+@media (max-width: 700px) {
+    .image {
+        display: none;
+    }
+    
+}
