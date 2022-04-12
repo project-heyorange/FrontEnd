@@ -30,7 +30,7 @@ const Filter = () => {
                         <FormGroup>
                             <h2>Bem Vindo ao Hey Orange!</h2>
                             <br />
-                            <h5>Encontre um mentor: </h5><br/>
+                            <h5>Encontre um mentor: </h5><br />
                             <Label>Especialidade:</Label>
                             <Input
                                 id="area"
