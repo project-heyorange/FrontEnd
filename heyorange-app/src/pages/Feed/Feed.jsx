@@ -1,12 +1,11 @@
 import React from "react"
 
 import Header from "../../components/Header/Header";
-import MainImage from "../../components/MainImage";
+import Filter from "../../components/Filter/Filter";
 
 const Feed = () => {
   return <>
-    <Header/>
-    <MainImage/>
+    <Filter/>
   
   </>
 }
