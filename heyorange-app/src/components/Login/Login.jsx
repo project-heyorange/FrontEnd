@@ -18,7 +18,24 @@ const LoginValidation = object().shape({
 
 const Login = () => {
     const handleSubmit = (values) => {
-        console.log(values)
+        var url = "caminho Do Back"
+        var headerLogin = new Headers();
+        var initLogin = {
+            method: 'POST',
+            headers: headerLogin,
+            mode: 'cors',
+            body: values,
+            cache: 'default'
+        }
+
+        fetch(url, initLogin)
+        .then(function(response){
+            return response.json();
+        }) 
+        .then(function(dadosDaResposta){
+            var dadosLogin = JSON.parse(dadosDaResposta)
+            //Fazer o redirect para a página inicial
+        })
     }
 
     return (
