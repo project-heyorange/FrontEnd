@@ -1,17 +1,14 @@
 import React from "react";
 
-// import Login from "./components/Login";
-// import Register from "./components/Register"
+import Card from "./components/Card/Card";
 // import Router from "./routes/routes";
-import Filter from "./components/Filter";
+
 
 
 function App() {
   return (
     <div>
-      <Filter />
-      {/* <Login /> */}
-      {/* <Login /> */}
+     <Card/>
       {/* <Router /> */}
     </div>
   );
