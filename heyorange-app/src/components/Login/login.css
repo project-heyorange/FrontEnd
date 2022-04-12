@@ -4,33 +4,37 @@
 }
 
 .input{
-    background-color: #E1E1E1;
+    background-color: #E1E1E1 !important;
     width: 384px;
     height: 48px;
 }
 
+.imput::placeholder {
+    color: #7E7E7E !important;
+}
+
 .LogInBtn {
-    color: white;
+    color: white !important;
     width: 384px;
     height: 48px;
-    background-color: #7e7e7e;
+    background-color: #7e7e7e !important;
     border-radius: 4px;
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 .CreateAcc {
     font-size: 16px;
     font-weight: bold;
-    color: #7E7E7E;
+    color: #7E7E7E !important;
     width: 384px;
     height: 48px;
-    background-color: white;
-    border: 1px solid #7E7E7E;
-    border-radius: 4px;
+    background-color: white !important;
+    border: 1px solid #7E7E7E !important;
+    border-radius: 4px !important;
 }
 
 a {
-    color: black;
+    color: black !important;
 }
 
 a:hover {

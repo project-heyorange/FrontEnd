@@ -1,19 +1,38 @@
-.header{
+.Header{
     font-size: 18px;
-    background:  #a38673c9;
+    background:#DEDEDE!important;
     width: 100%;
-    max-width: 1980px;
-    margin: 0 auto;
+    /* max-width: 1980px; */
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    list-style-type: none;
+    border: none !important;
+    position: fixed;
     
 }
+.ProfileTitle {
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
 
-.header-links{
+.header-links {
+    display: flex;
+    gap: 50px;
+}
+
+.header-links a {
     text-decoration: none;
-   
-    
+    color: black;
 }
 
+.header-links a:hover {
+    color: #7E7E7E;
+}
+
+.Nav-links {
+    font-size: 18px;
+    font-weight: bold;
+}

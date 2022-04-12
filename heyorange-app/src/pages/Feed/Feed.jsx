@@ -3,10 +3,10 @@ import React from "react"
 import Header from "../../components/Header/Header";
 import Filter from "../../components/Filter/Filter";
 
-const Home = () => {
+const Feed = () => {
   return <>
     <Filter/>
   
   </>
 }
-export default Home;
+export default Feed;

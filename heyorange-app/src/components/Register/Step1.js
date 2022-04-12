@@ -25,10 +25,10 @@ const Step1 = ({ prevStep }) => {
                 <RadioButton name="area" label="Desenvolvedor" value="desenvolvedor" />
                 <RadioButton name="area" label="Design" value="design" />
             </FormGroup>
-            <Button onClick={prevStep}>
+            <Button className="PrevBtn" onClick={prevStep}>
                 Voltar
             </Button>
-            <Button type="submit">
+            <Button className="NextBtn" type="submit">
                 Próximo
             </Button>
         </div>
