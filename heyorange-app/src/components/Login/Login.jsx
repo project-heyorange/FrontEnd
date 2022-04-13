@@ -37,12 +37,13 @@ const Login = () => {
                     <div className="register-container">
                   
             {/* <img src="https://via.placeholder.com/660" className="HomeImg" /> */}
-            <MainImage/>
+            <div className="image"></div>
             
-                    <Form>
-                    <h2 className="Title">
-                Bem-vindo!
-                    </h2>
+                    <Form className="LogIn-container">
+                        <h2 className="Title">
+                        Hey Orange!
+                        </h2>
+                        <h5 className="Subtitle">A plataforma de mentoria do Grupo FCamara.</h5>
                         <Input name="email" label="Email" />
                         <Input name="password" label="Senha" type="password" />
                         <div>

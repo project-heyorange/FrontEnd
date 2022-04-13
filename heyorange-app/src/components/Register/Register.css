@@ -8,6 +8,7 @@
 }
 
 .Title {
+    color: #FE4400;
     text-align: center;
     margin-bottom: 16px;
     font-size: 32px;
@@ -26,7 +27,7 @@ h3, h5, h6 {
     justify-content: space-around;
     flex-wrap: wrap;
     /* padding: 128px 16px; */
-    background-color: #fff;
+    background-color: #FBFBFB;
     gap: 16px;
     height: 100vh;
 }
@@ -74,7 +75,6 @@ h3, h5, h6 {
 }
 
 .input {
-    background-color: #E1E1E1 !important;
     width: 384px !important;
     height: 48px !important;
 }
