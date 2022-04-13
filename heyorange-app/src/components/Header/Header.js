@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Card, CardHeader, Nav, NavItem, NavLink } from "reactstrap";
+import { Link } from 'react-router-dom'
 
 import "./Header.css";
 
@@ -14,8 +15,8 @@ const Header = () => {
                     </NavItem>
 
                     <NavItem className="header-links">
-                        <a className="Nav-links" href="#"> Agenda</a>
-                        <a className="Nav-links" href="#">Sair</a>
+                        <Link to="/agendar"className="Nav-links" > Agenda</Link>
+                        <Link to="/"className="Nav-links" >Sair</Link>
                     </NavItem>
                     {/* </Nav> */}
             </CardHeader>

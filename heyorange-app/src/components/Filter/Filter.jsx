@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "./Filter.css"
-import { FormGroup, Button} from "reactstrap";
+import { FormGroup, Button } from "reactstrap";
 import { Formik, Form } from "formik";
 import Input from "../Input";
 import { Link } from "react-router-dom";
@@ -22,7 +22,7 @@ const Filter = () => {
     }
 
 
-    const handleSubmit = async (values) => {
+    const handleSubmit = async(values) => {
         // Api.post("Rota de login no back", values).then(({data}) => {if(data == true){"Redireciona"}})
         await requestToBack()
         console.log(values)
@@ -93,8 +93,8 @@ const Filter = () => {
                                 </Input>
                             </FormGroup>
                             <br />
-                            <Link to="/mentores"><Button className="SearchBtn" type="submit">
-                               Realizar Busca
+                            <Link to="/mentores"><Button className="SearchBtn" type="submit" disabled={loading}>
+                                {loading ? "Carregando..." : "Realizar Busca"}
                             </Button></Link>
                         </Form>
                     </>

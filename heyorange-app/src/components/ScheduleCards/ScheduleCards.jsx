@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardBody, CardText } from "reactstrap";
+import {Link} from "react-router-dom"
 import "./ScheduleCards.css"
 
 const ScheduleCards = () => {
@@ -8,8 +9,8 @@ const ScheduleCards = () => {
 
             {/* <Card className="container" color="light"> */}
 
+                <Link className="LinkRota" to="/mentoria">
                 <CardBody className="body-container">
-
                     <CardText className="row">
                         <div className="col-4">
                             <p><strong >15/Abril<br />2022</strong></p>
@@ -20,10 +21,12 @@ const ScheduleCards = () => {
                         </div>
                     </CardText>
                 </CardBody>
+                </Link>
             {/* </Card> */}
 
 
             {/* <Card className="container" color="light"> */}
+            <Link className="LinkRota" to="/mentoria">
                 <CardBody className="body-container">
 
                     <CardText className="row">
@@ -36,6 +39,7 @@ const ScheduleCards = () => {
                         </div>
                     </CardText>
                 </CardBody>
+            </Link>
             {/* </Card> */}
 
         </div>
