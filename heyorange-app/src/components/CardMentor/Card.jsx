@@ -1,7 +1,9 @@
 import React from "react";
-import { useEffect, useState } from "react/cjs/react.production.min";
+import { useEffect, useState } from "react";
 import { Card, CardBody, CardText } from "reactstrap";
 import Api from "../../services/api";
+import "../CardMentor/Card.css"
+import { Link } from "react-router-dom";
 
 
 
@@ -19,8 +21,28 @@ const CardMentor = () => {
 
     return (
         <div>
-            <h4>Mentores Disponíveis:</h4>
-            {user?.map((user, index) => {
+            {/* <Card className="CardContainer"> */}
+                    <CardBody className="CardBody">
+                        <CardText className="MentorName">
+                            Eduardo
+                        </CardText>
+
+                        <CardText className="MentorDetails">
+                            Desenvolvedor
+                        </CardText>
+
+                        <CardText className="MentorDetails">
+                            Pleno
+                        </CardText>
+
+                        <CardText className="MentorDetails">
+                            Java / Python / React
+                        </CardText>
+
+                    </CardBody>
+                {/* </Card> */}
+
+            {/* {user?.map((user, index) => {
                 <Card key={index}>
                     <CardBody>
                         <CardText>
@@ -41,7 +63,7 @@ const CardMentor = () => {
 
                     </CardBody>
                 </Card>
-            })})
+            })}) */}
 
         </div>
 

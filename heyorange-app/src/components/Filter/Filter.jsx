@@ -1,9 +1,10 @@
 import React from "react";
 
 import "./Filter.css"
-import { FormGroup, Button, Label } from "reactstrap";
+import { FormGroup, Button} from "reactstrap";
 import { Formik, Form } from "formik";
 import Input from "../Input";
+import { Link } from "react-router-dom";
 
 
 
@@ -77,9 +78,9 @@ const Filter = () => {
                             </Input>
                         </FormGroup>
                         <br />
-                        <Button type="submit">
+                        <Link to="/mentores"><Button type="submit">
                             Realizar Busca
-                        </Button>
+                        </Button></Link>
                     </Form>
                     </>
                 )

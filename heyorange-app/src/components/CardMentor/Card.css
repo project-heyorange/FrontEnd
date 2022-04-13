@@ -1,0 +1,39 @@
+/* .CardContainer {
+    max-width: 384px !important;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+} */
+
+.CardContainer {
+    max-height: 180px !important;
+    display: flex;
+}
+
+.MentorName {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.MentorDetails {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.CardBody {
+    background-color: #fce0d6 !important;
+    /* opacity: 0.5; */
+    border-radius: 4px;
+    border: 1px solid #FEBBA2;
+    height: 180px;
+    width: 384px;
+    cursor: pointer;
+    transition: 1s ease-out;
+    /* margin-top: 300px; */
+}
+
+.CardBody:hover{
+    background-color: #FEBBA2!important;
+}
