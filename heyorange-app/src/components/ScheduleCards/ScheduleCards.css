@@ -1,0 +1,14 @@
+.container{
+    width: 100%;
+    max-width: 100px !important;
+    background: #c4c4c4 !important;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+   
+}
+
+.body-card{
+    display: flex !important;
+    flex-direction: row !important;
+}

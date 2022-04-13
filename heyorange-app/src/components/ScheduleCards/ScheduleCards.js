@@ -5,27 +5,56 @@ const ScheduleCards = () => {
     return (
         <div>
             <h4>Horários Disponíveis:</h4>
-                <Card>
-                    <CardBody>
+            <Card className="container" color="light">
+                
+                <CardBody className="body-container">
 
-                        <CardText>
-                           Data
-                        </CardText>
+                    <CardText>
+                        <p><strong>15/Abril</strong></p>
+                        <p><strong>2022</strong></p>
+                    </CardText>
 
-                        <CardText>
-                            Nome do mentor
-                        </CardText>
+                    <CardText>
+                        <strong>Anna</strong>
+                    </CardText>
 
-                        <CardText>
-                            Horário
-                        </CardText>
+                    <CardText>
+                        🕒 15:00 - 15:30
+                    </CardText>
 
-                        <CardText>
-                           icone de pendente
-                        </CardText>
+                    <CardText>
+                        ⚠️ Pendente
+                    </CardText>
 
-                    </CardBody>
-                </Card>
+                </CardBody>
+
+
+            </Card>
+
+            <Card className="container" color="light">
+                <CardBody className="body-container">
+
+                    <CardText>
+                        <p><strong>16/Abril</strong></p>
+                        <p><strong>2022</strong></p>
+                    </CardText>
+
+                    <CardText>
+                        <strong>Henrique</strong>
+                    </CardText>
+
+                    <CardText>
+                        🕒 15:00 - 15:30
+                    </CardText>
+
+                    <CardText>
+                        ⚠️ Pendente
+                    </CardText>
+
+                </CardBody>
+
+
+            </Card>
 
         </div>
 
