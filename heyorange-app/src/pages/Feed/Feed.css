@@ -1,0 +1,29 @@
+.wrapper {
+    box-sizing: border-box;
+    /* width: 100vw; */
+    height: 100vh;
+    background-color:  #FBFBFB;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.FeedImg {
+    width: 584px;
+    /* height: 100vh; */
+    max-height: 100vh;
+    background-image: url(../../components/assets/Desktop\ -\ Imagem\ 2.svg);
+    background-size: cover;
+    margin-left: 100px;
+}
+
+
+@media (max-width: 700px) {
+    .form-container {
+       margin-right: 108px;
+    }
+
+    .FeedImg {
+        display: none;
+    }
+    
+}

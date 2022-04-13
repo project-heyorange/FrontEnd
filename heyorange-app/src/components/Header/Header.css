@@ -1,14 +1,17 @@
 .Header{
     font-size: 18px;
-    background:#DEDEDE!important;
+    color: #3B3B3B;
+    background:#FBFBFB!important;
     width: 100%;
-    /* max-width: 1980px; */
+    height: 78px !important;
+    max-width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style-type: none;
-    border: none !important;
-    position: fixed;
+    border-top: 0px !important;
+    border-bottom: 2px solid #FE4400 !important;
+    position: absolute;
     
 }
 .ProfileTitle {

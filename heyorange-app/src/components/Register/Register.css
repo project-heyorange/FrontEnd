@@ -17,8 +17,35 @@
     line-height: 40px;
 }
 
-h3, h5, h6 {
+.Title-Signup {
+    color: black !important;
     text-align: center;
+    margin-bottom: 16px;
+    font-size: 32px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.signin-subtitle {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 16px;
+margin-bottom: 30px;
+line-break: loose;
+}
+
+h3, h6 {
+    text-align: center;
+}
+
+.legend-questions {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+
 }
 
 .register-container {
@@ -26,37 +53,56 @@ h3, h5, h6 {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* padding: 128px 16px; */
     background-color: #FBFBFB;
     gap: 16px;
     height: 100vh;
 }
 
 
-.HomeImg {
-    border-radius: 24px;
+.Signup-image {
+    width: 584px;
+    min-height: 100vh;
+    background-image: url(../assets/Desktop\ -\ Imagem\ 1.svg);
+    background-size: cover;
+    margin-left: 128px;
 }
 
 .form-container {
-    max-width: 400px;
-    width: 100%;
-    max-height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 229px;
+    margin-left: 116px;
+    max-width: 384px;
+    
+}
+
+@media (max-width: 700px) {
+    .form-container {
+       margin-right: 108px;
+    }
+
+    .Signup-image {
+        display: none;
+    }
     
 }
 
 .CreateAccBtn {
-    width: 100%;
-    font-weight: bold !important;
-    font-size: 14px;
+    color: white !important;
+    width: 384px;
     height: 48px;
-    border: 1px solid #000000;
+    background-color: #FE4400 !important;
     border-radius: 4px;
-    margin-top: 16px;
+    border-color: #FE4400 !important;
+    font-weight: bold !important;
+    margin-top: 26px;
 }
 
 .PrevBtn {
-    color: #7E7E7E !important;
-    background-color: white !important;
+    color: #3B3B3B !important;
+    background-color: #FBFBFB !important;
     width: 184px;
     height: 48px;
     border: 1px solid #7E7E7E;
@@ -64,12 +110,16 @@ h3, h5, h6 {
     border-radius: 4px;
     margin-right: 16px;
     margin-top: 10px;
+    font-weight: bold !important;
 }
 
 .NextBtn {
+    color: #F7F7F7 !important;
+    font-weight: bold !important;
     width: 184px;
     height: 48px;
-    background: #7E7E7E;
+    background: #FE4400 !important;
+    border-color: #FE4400 !important;
     border-radius: 4px;
     margin-top: 10px;
 }
@@ -77,4 +127,8 @@ h3, h5, h6 {
 .input {
     width: 384px !important;
     height: 48px !important;
+}
+
+.orange-progressbar .progress-bar{
+    background-color: #FE4400 !important;
 }

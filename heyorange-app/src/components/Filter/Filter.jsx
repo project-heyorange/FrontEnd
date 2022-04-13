@@ -23,23 +23,26 @@ const Filter = () => {
         >
             {() => {
                 return (
-                    <Form
-                        className="container"
+                    <>
+                         
+                         <Form
+                        className="form-container"
                         id="form"
                     >
+                        
                         <FormGroup>
-                            <h2>Bem Vindo ao Hey Orange!</h2>
-                            <br />
-                            <h5>Encontre um mentor: </h5><br />
-                            <Label>Especialidade:</Label>
-                            <Input
+                            <h2 className="FilterTitle">Hey Eduardo!</h2>
+                            <h5 className="FilterSubtitle">Seja muito bem-vindo a plataforma de mentoria do grupo FCamara.</h5>
+                           
+                            <h5 className="FilterPhrase">Encontre um mentor: </h5>
+                            <Input className = "InputText"
                                 id="area"
                                 name="area"
                                 type="select"
 
                             >
-                                <option value="" readOnly>
-                                    Selecione
+                                <option value="" disabled>
+                                    Especialidade
                                 </option>
                                 <option value="Design">
                                     Design
@@ -50,15 +53,14 @@ const Filter = () => {
                             </Input>
                         </FormGroup>
                         <FormGroup>
-                            <Label>Experiência:</Label>
-                            <Input
+                            <Input className = "InputText"
                                 id="nivelExperiencia"
                                 name="nivelExperiencia"
                                 type="select"
 
                             >
-                                <option value="" readOnly>
-                                    Selecione
+                                <option value="" disabled>
+                                    Experiência
                                 </option>
                                 <option value="Trainee">
                                     Trainee
@@ -79,6 +81,7 @@ const Filter = () => {
                             Realizar Busca
                         </Button>
                     </Form>
+                    </>
                 )
             }}
         </Formik>
