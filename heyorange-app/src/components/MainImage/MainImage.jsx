@@ -1,13 +1,13 @@
-import "./MainImage.css"
+// import "./MainImage.css"
 
-const MainImage = () => {
-    return (
-        <div className="image"></div>
+// const MainImage = () => {
+//     return (
+//         <div className="image"></div>
 
-    )
-}
-
-
+//     )
+// }
 
 
-export default MainImage;
+
+
+// export default MainImage;

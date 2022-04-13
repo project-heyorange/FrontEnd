@@ -11,7 +11,7 @@ import Checkbox from "../Checkbox";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
-import MainImage from "../MainImage";
+// import MainImage from "../MainImage";
 
 const Register = () => {
     const [showRegister, setShowRegister] = useState(true)
@@ -54,7 +54,7 @@ const Register = () => {
     const registerContainer = ({ isValid }) => (
         <>
             <h2 className="Title">
-                Bem-vindo!
+                Hey Orange!
             </h2>
             <Input name="name" label="Nome" />
             <Input name="email" label="Email" />
@@ -99,7 +99,7 @@ const Register = () => {
 
     return (
         <div className="register-container">
-            <MainImage/>
+            {/* <MainImage/> */}
             <Formik
                 initialValues={{
                     name: "",

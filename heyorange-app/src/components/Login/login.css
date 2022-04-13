@@ -3,8 +3,49 @@
     padding: 0;
 }
 
+.image {
+    /* display: flex;
+    align-items: flex-start; */
+    width: 584px;
+    min-height: 100vh;
+    background-image: url(../assets/Desktop\ -\ Imagem\ 1.svg);
+    background-size: cover;
+    margin-left: 128px;
+}
+
+@media (max-width: 700px) {
+    .image {
+        display: none;
+    }
+    
+}
+
+.LogIn-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 229px;
+    margin-left: 116px;
+}
+
+@media (max-width: 700px) {
+    .LogIn-container {
+       margin-right: 108px;
+    }
+    
+}
+
+.Subtitle {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 16px;
+margin-bottom: 30px;
+}
+
 .input{
-    background-color: #E1E1E1 !important;
     width: 384px;
     height: 48px;
 }
@@ -17,15 +58,16 @@
     color: white !important;
     width: 384px;
     height: 48px;
-    background-color: #7e7e7e !important;
+    background-color: #FE4400 !important;
     border-radius: 4px;
+    border-color: #FE4400 !important;
     font-weight: bold !important;
 }
 
 .CreateAcc {
     font-size: 16px;
     font-weight: bold;
-    color: #7E7E7E !important;
+    color:#3B3B3B !important;
     width: 384px;
     height: 48px;
     background-color: white !important;
@@ -34,7 +76,7 @@
 }
 
 a {
-    color: black !important;
+    color: #3B3B3B !important;
 }
 
 a:hover {

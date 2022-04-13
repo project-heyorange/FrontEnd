@@ -1,16 +1,16 @@
 import React from "react";
-import CardMentor from "./components/CardMentor/Card";
+// import CardMentor from "./components/CardMentor/Card";
 
 
-// import Router from "./routes/routes";
+import Router from "./routes/routes";
 
 
 
 function App() {
   return (
     <div>
-     <CardMentor/>
-      {/* <Router /> */}
+     {/* <CardMentor/> */}
+      <Router />
     </div>
   );
 }
