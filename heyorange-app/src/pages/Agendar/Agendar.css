@@ -1,0 +1,44 @@
+.DatesWrapper {
+    box-sizing: border-box;
+    /* width: 100vw; */
+    height: 100vh;
+    background-color:  #FBFBFB !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DatesImg {
+    width: 584px;
+    height: 100vh;
+    max-height: 100vh;
+    background-image: url(../../components/assets/Desktop\ -\ Imagem\ 3.svg);
+    background-size: cover;
+    margin-left: 400px;
+    display: flex;
+}
+
+@media (max-width: 700px) {
+    .DatesImg {
+      display: none;
+    }
+
+}
+
+.container {
+    max-width: 384px !important;
+    min-height: 100vh !important;
+    margin-right: 200px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+}
+
+.DatesTitle {
+    font-weight: 700;
+    font-size: 24px;
+    color: #3B3B3B;
+}
