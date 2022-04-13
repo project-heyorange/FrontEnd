@@ -1,10 +1,7 @@
 import axios from "axios";
 
 const Api = axios.create({
-  baseURL: "https://api.thecatapi.com/"
+  baseURL: "Coloque aqui a api"
 });
 
 export default Api;
-
-//parametros para imagem 
-//api/images/get?format=src&type=png
