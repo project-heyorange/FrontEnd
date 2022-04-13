@@ -22,7 +22,7 @@ const CardMentor = () => {
     return (
         <div>
             {/* <Card className="CardContainer"> */}
-                    <CardBody className="CardBody">
+            <Link className="LinkRota" to="/agendar"><CardBody className="CardBody">
                         <CardText className="MentorName">
                             Eduardo
                         </CardText>
@@ -39,7 +39,7 @@ const CardMentor = () => {
                             Java / Python / React
                         </CardText>
 
-                    </CardBody>
+                    </CardBody></Link>
                 {/* </Card> */}
 
             {/* {user?.map((user, index) => {

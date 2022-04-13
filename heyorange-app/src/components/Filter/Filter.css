@@ -49,3 +49,14 @@
     font-size: 13px;
     border: 1px solid #FE4400 !important;
 }
+
+.SearchBtn {
+    color: white !important;
+    width: 384px;
+    height: 48px;
+    background-color: #FE4400 !important;
+    border-radius: 4px;
+    border-color: #FE4400 !important;
+    font-weight: bold !important;
+    padding: 0 !important;
+}

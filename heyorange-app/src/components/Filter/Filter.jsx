@@ -93,9 +93,9 @@ const Filter = () => {
                                 </Input>
                             </FormGroup>
                             <br />
-                            <Button type="submit" disabled={loading}>
-                                {loading ? "Carregando..." : "Realizar Busca"}
-                            </Button>
+                            <Link to="/mentores"><Button className="SearchBtn" type="submit">
+                               Realizar Busca
+                            </Button></Link>
                         </Form>
                     </>
                 )
