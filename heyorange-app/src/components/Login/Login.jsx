@@ -1,6 +1,6 @@
 import React from "react";
 
-import Api from "../../api";
+import Api from "../../services/api";
 
 import { Formik, Form } from "formik"
 import { object, string } from "yup";
