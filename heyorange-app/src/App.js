@@ -1,7 +1,7 @@
 import React from "react";
 // import CardMentor from "./components/CardMentor/Card";
 
-
+import ScheduleCards from "./components/ScheduleCards/ScheduleCards";
 import Router from "./routes/routes";
 
 
@@ -9,8 +9,8 @@ import Router from "./routes/routes";
 function App() {
   return (
     <div>
-     {/* <CardMentor/> */}
-      <Router />
+      <ScheduleCards/>
+      {/* <Router /> */}
     </div>
   );
 }

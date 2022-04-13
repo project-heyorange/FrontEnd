@@ -11,7 +11,9 @@ import Checkbox from "../Checkbox";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
-// import MainImage from "../MainImage";
+
+
+
 
 const Register = () => {
     const [showRegister, setShowRegister] = useState(true)
@@ -37,7 +39,10 @@ const Register = () => {
     }
 
     const handleSubmit = async (values) => {
+     //    Api.post("Rota de login no back", values).then(({data}) => {if(data == true){"Redireciona"}})
+
         console.log(values)
+        
         if (showRegister) {
             startSteps()
             return

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Api from "../../api";
+import Api from "../../services/api"
 
 import { Formik, Form } from "formik"
 import { object, string } from "yup";
@@ -17,9 +17,16 @@ const LoginValidation = object().shape({
 });
 
 const Login = () => {
-    const handleSubmit = (values) => {
-       
+
+    const requestToBack = async () => {
+        await new Promise(resolve => setTimeout(resolve, 5000));
     }
+    
+    const handleSubmit = async (values) => {
+        console.log(values)
+    //    Api.post("Rota de login no back", values).then(({data}) => {if(data == true){"Redireciona"}})
+    }
+
 
     return (
         <Formik
