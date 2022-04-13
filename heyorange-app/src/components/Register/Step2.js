@@ -5,7 +5,7 @@ import Input from "../Input"
 const Step2 = ({ prevStep, loading }) => {
     return (
         <div>
-            <h2 className="Title">Conte um pouco mais sobre você</h2>
+            <h2 className="Title-Signup">Conte um pouco mais sobre você</h2>
             <p></p>
             <br/>
             <h6><strong>Digite até 3 Habilidades que você possuí (Exemplo: UI, Java, UX, Wireframe, AI, Angular, etc...)</strong></h6><br/>

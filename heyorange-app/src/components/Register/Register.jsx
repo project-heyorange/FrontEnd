@@ -56,6 +56,7 @@ const Register = () => {
             <h2 className="Title">
                 Hey Orange!
             </h2>
+            <h5 className="signin-subtitle">Crie sua conta para ter acesso aos melhores mentores.</h5>
             <Input name="name" label="Nome" />
             <Input name="email" label="Email" />
             <Input name="password" label="Senha" type="password" />
@@ -99,7 +100,7 @@ const Register = () => {
 
     return (
         <div className="register-container">
-            {/* <MainImage/> */}
+            <div className="Signup-image"></div>
             <Formik
                 initialValues={{
                     name: "",
@@ -123,7 +124,7 @@ const Register = () => {
                             {!showRegister && (
                                 <div>
 
-                                    <Progress color="warning" value={[33, 66, 100][step]} /><br /><br />
+                                    <Progress className="orange-progressbar" color="danger" value={[33, 66, 100][step]} /><br /><br />
 
                                     {{
                                         0: <Step1 prevStep={backToRegister} />,

@@ -8,7 +8,6 @@ import { Button } from "reactstrap";
 import "./login.css";
 import Input from "../Input";
 import { Link } from "react-router-dom";
-import MainImage from "../MainImage";
 
 const LoginValidation = object().shape({
     email: string()
@@ -35,9 +34,7 @@ const Login = () => {
                 return (
                  
                     <div className="register-container">
-                  
-            {/* <img src="https://via.placeholder.com/660" className="HomeImg" /> */}
-            <div className="image"></div>
+                    <div className="image"></div>
             
                     <Form className="LogIn-container">
                         <h2 className="Title">

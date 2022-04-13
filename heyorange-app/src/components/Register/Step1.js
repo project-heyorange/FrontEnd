@@ -7,10 +7,10 @@ const Step1 = ({ prevStep }) => {
     return (
         <div>
             <FormGroup>
-                <h2 className="Title">Conte um pouco mais sobre você</h2>
+                <h2 className="Title-Signup">Conte um pouco mais sobre você</h2>
                 <p></p><br/>
-                <legend>
-                    <strong>Qual seu nivel de experiência?</strong>
+                <legend className="legend-questions">
+                    Qual seu nivel de experiência?
                 </legend>
                
                 <RadioButton name="nivelExperiencia" label="Trainee" value="trainee" />
@@ -19,8 +19,8 @@ const Step1 = ({ prevStep }) => {
                 <RadioButton name="nivelExperiencia" label="Senior" value="senior" />
             </FormGroup>
             <FormGroup>
-                <legend>
-                    <strong>Que área você atua?</strong>
+                <legend className="legend-questions">
+                    Que área você atua?
                 </legend>
                 <RadioButton name="area" label="Desenvolvedor" value="desenvolvedor" />
                 <RadioButton name="area" label="Design" value="design" />

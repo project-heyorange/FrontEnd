@@ -11,7 +11,7 @@ const Step3 = ({ }) => {
     return (
         <div>
             
-            <h2 className="Title">Hey Orange! <br/></h2>
+            <h2 className="Title-Signup">Hey Orange! <br/></h2>
                 <h3><strong>Cadastro Realizado com Sucesso!</strong></h3>
             
                 <Link to="/feed"><Button className="CreateAccBtn" onClick={onFinish}>
