@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import Agendar from "../pages/Agendar";
 
 import Feed from "../pages/Feed/Feed";
 import Mentores from "../pages/Mentores";
@@ -25,6 +26,7 @@ const Router = () => {
         <Route path={"/register"} element={<Register />} />
         <Route path={"/feed"} element={<Feed />} />
         <Route path={"/mentores"} element={<Mentores/>} />
+        <Route path={"/agendar"} element={<Agendar/>} />
 
       </Routes>
     </BrowserRouter>

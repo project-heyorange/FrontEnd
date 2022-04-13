@@ -37,3 +37,7 @@
 .CardBody:hover{
     background-color: #FEBBA2!important;
 }
+
+.LinkRota {
+    text-decoration: none;
+}
