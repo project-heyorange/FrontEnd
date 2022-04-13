@@ -1,6 +1,7 @@
 import React from "react";
+import CardMentor from "./components/CardMentor/Card";
 
-import Card from "./components/Card/Card";
+
 // import Router from "./routes/routes";
 
 
@@ -8,7 +9,7 @@ import Card from "./components/Card/Card";
 function App() {
   return (
     <div>
-     <Card/>
+     <CardMentor/>
       {/* <Router /> */}
     </div>
   );

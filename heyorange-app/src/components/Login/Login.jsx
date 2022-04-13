@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Navigate } from "react-router-dom";
+import Api from "../../api";
 
 import { Formik, Form } from "formik"
 import { object, string } from "yup";
@@ -19,24 +19,7 @@ const LoginValidation = object().shape({
 
 const Login = () => {
     const handleSubmit = (values) => {
-        var url = "caminho Do Back"
-        var headerLogin = new Headers();
-        var initLogin = {
-            method: 'POST',
-            headers: headerLogin,
-            mode: 'cors',
-            body: values,
-            cache: 'default'
-        }
-
-        fetch(url, initLogin)
-        .then(function(response){
-            return response.json();
-        }) 
-        .then(function(dadosDaResposta){
-            var dadosLogin = JSON.parse(dadosDaResposta)
-            //Fazer o redirect para a página inicial
-        })
+       
     }
 
     return (
