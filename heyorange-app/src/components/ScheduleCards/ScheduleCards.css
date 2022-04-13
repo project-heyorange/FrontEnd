@@ -12,3 +12,8 @@
     display: flex !important;
     flex-direction: row !important;
 }
+
+.box{
+    display: flex;
+    flex-direction: row-reverse !important;
+}
