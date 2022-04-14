@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import Api from "../../services/api"
 
@@ -7,7 +7,7 @@ import { object, string } from "yup";
 import { Button } from "reactstrap";
 import "./login.css";
 import Input from "../Input";
-import { Link } from "react-router-dom";
+import { Link,Navigate } from "react-router-dom";
 
 const LoginValidation = object().shape({
     email: string()
@@ -17,15 +17,18 @@ const LoginValidation = object().shape({
 });
 
 const Login = () => {
-
+    const [redirectToFeed, setRedirectToFeed] = useState(false);
     const requestToBack = async () => {
         await new Promise(resolve => setTimeout(resolve, 5000));
     }
     
     const handleSubmit = async (values) => {
+        setRedirectToFeed(!redirectToFeed)
         console.log(values)
     //    Api.post("Rota de login no back", values).then(({data}) => {if(data == true){"Redireciona"}})
     }
+
+    if(redirectToFeed == true) return <Navigate to="/feed"/>
 
 
     return (

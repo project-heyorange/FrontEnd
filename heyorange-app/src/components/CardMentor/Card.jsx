@@ -9,14 +9,14 @@ import { Link } from "react-router-dom";
 
 const CardMentor = () => {
 
-    const [user, setUser] = useState([]);
+    // const [user, setUser] = useState([]);
 
-    useEffect(() => {
-        Api.get("filter").then(({ data }) => {
-            setUser(data)
-        })
-        // eslint-desable-next-line react-hooks/exhaustive-deps
-    }, []);
+    // useEffect(() => {
+    //     Api.get("filter").then(({ data }) => {
+    //         setUser(data)
+    //     })
+    //     // eslint-desable-next-line react-hooks/exhaustive-deps
+    // }, []);
 
 
     return (
