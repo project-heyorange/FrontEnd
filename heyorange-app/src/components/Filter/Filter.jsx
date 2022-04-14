@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, {useState } from "react";
 
 import "./Filter.css"
 import { FormGroup, Button } from "reactstrap";
 import { Formik, Form } from "formik";
 import Input from "../Input";
-import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 // import Api from "../../services/api";
 
@@ -12,21 +12,16 @@ import { Link } from "react-router-dom";
 
 
 const Filter = () => {
-
-    const [loading, setLoading] = useState(false)
-
-    const requestToBack = async () => {
-        setLoading(true)
-        await new Promise(resolve => setTimeout(resolve, 5000));
-        setLoading(false)
-    }
-
+    const [redirectToMentores, setRedirectToMentores] = useState(false);
 
     const handleSubmit = async (values) => {
         // Api.post("Rota de login no back", values).then(({data}) => {if(data == true){"Redireciona"}})
-        await requestToBack()
         console.log(values)
+        setRedirectToMentores(!redirectToMentores)
     }
+
+    if(redirectToMentores) return <Navigate to="/mentores"/>
+
 
     return (
         <Formik
@@ -38,7 +33,7 @@ const Filter = () => {
         >
             {() => {
                 return (
-                    <>
+                
 
                         <Form
                             className="form-container"
@@ -92,12 +87,11 @@ const Filter = () => {
                                 </Input>
                             </FormGroup>
                             <br />
-                            <Link to="/mentores"><Button className="SearchBtn" type="submit" disabled={loading}>
-                                {loading ? "Carregando..." : "Realizar Busca"}
-                                
-                            </Button></Link>
+                            <Button className="SearchBtn" type="submit">
+                                Realizar Busca
+                            </Button>
                         </Form>
-                    </>
+                    
                 )
             }}
         </Formik>
