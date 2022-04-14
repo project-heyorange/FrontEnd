@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import Api from "../../services/api"
+import Api from "../../services/api";
 
 import { Formik, Form } from "formik"
 import { object, string } from "yup";
@@ -24,8 +24,9 @@ const Login = () => {
     
     const handleSubmit = async (values) => {
         setRedirectToFeed(!redirectToFeed)
+        const new_user = await Api.post('/', values)      
         console.log(values)
-    //    Api.post("Rota de login no back", values).then(({data}) => {if(data == true){"Redireciona"}})
+        
     }
 
     if(redirectToFeed == true) return <Navigate to="/feed"/>

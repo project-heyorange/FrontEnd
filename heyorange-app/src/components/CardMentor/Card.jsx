@@ -9,61 +9,50 @@ import { Link } from "react-router-dom";
 
 const CardMentor = () => {
 
-    // const [user, setUser] = useState([]);
+    const [users, setUsers] = useState([]);
 
-    // useEffect(() => {
-    //     Api.get("filter").then(({ data }) => {
-    //         setUser(data)
-    //     })
-    //     // eslint-desable-next-line react-hooks/exhaustive-deps
-    // }, []);
+    useEffect(() => {
+        Api.get("/").then(({ data }) => {
+            setUsers([data])
+        })
+        // eslint-desable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    useEffect(() => {
+        console.log(users)
+    }, [users])
+
 
 
     return (
         <div>
-            {/* <Card className="CardContainer"> */}
-            <Link className="LinkRota" to="/agendar"><CardBody className="CardBody">
-                        <CardText className="MentorName">
-                            Eduardo
-                        </CardText>
+            {users.length > 0 && (
+                <div>
+                    {users?.map((user, index) => (
+                        <Card key={index} className="CardContainer">
+                            <Link className="LinkRota" to="/agendar">
+                                <CardBody className="CardBody">
+                                    <CardText className="MentorName">
+                                        {user.name}
+                                    </CardText>
 
-                        <CardText className="MentorDetails">
-                            Desenvolvedor
-                        </CardText>
+                                    <CardText className="MentorDetails">
+                                        {user.nivelExperiencia}
+                                    </CardText>
 
-                        <CardText className="MentorDetails">
-                            Pleno
-                        </CardText>
+                                    <CardText className="MentorDetails">
+                                        {user.area}
+                                    </CardText>
 
-                        <CardText className="MentorDetails">
-                            Java / Python / React
-                        </CardText>
+                                    <CardText>
+                                        {user.habilidades}
+                                    </CardText>
 
-                    </CardBody></Link>
-                {/* </Card> */}
-
-            {/* {user?.map((user, index) => {
-                <Card key={index}>
-                    <CardBody>
-                        <CardText>
-                            {user.nome}
-                        </CardText>
-
-                        <CardText>
-                            {user.area}
-                        </CardText>
-
-                        <CardText>
-                            {user.nivel}
-                        </CardText>
-
-                        <CardText>
-                            {user.habilidades}
-                        </CardText>
-
-                    </CardBody>
-                </Card>
-            })}) */}
+                                </CardBody></Link>
+                        </Card>
+                    ))}
+                </div>
+            )}
 
         </div>
 
