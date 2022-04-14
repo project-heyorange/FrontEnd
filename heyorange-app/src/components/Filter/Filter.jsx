@@ -22,7 +22,6 @@ const Filter = () => {
 
     if(redirectToMentores) return <Navigate to="/mentores"/>
 
-
     return (
         <Formik
             initialValues={{
