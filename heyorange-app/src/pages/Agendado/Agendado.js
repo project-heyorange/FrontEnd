@@ -10,9 +10,9 @@ const Agendado = () => {
         <>
             <Header />
             <div className="DatesWrapper">
-                <div className="DatesImg"></div>
+                <div className="ScheduleImg"></div>
                 <div className="container">
-                    <h2 className="DatesTitle">Uhuuuuuu!  </h2>
+                    <h2 className="AgendadoTitle">Uhuuuuuu!  </h2>
                     <Mentory/>
                 </div>
             </div>

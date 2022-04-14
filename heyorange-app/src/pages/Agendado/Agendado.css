@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.DatesImg {
+.ScheduleImg {
     width: 584px;
     height: 100vh;
     max-height: 100vh;
@@ -20,10 +20,9 @@
 }
 
 @media (max-width: 700px) {
-    .DatesImg {
+    .ScheduleImg {
       display: none;
     }
-
 }
 
 .container {
@@ -35,11 +34,10 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding-top: 10%;
 
 }
 
-.DatesTitle {
+.AgendadoTitle {
     font-weight: 700;
     font-size: 24px;
     color: #3B3B3B;

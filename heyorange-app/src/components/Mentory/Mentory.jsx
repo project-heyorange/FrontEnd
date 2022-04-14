@@ -10,7 +10,7 @@ const Mentory = () => {
 
             <div className="container-mentoria">
                 <Card className="container-card">
-                    <CardBody className="body-container">
+                    <CardBody className="ScheduleContainer">
                         <CardTitle>
                             <h5>Confirmado!</h5>
                         </CardTitle>
@@ -40,8 +40,8 @@ const Mentory = () => {
                     </CardBody>
                 </Card>
                 <div className="botoes">
-                    <Link to="/feed"><Button >Busca</Button></Link>
-                    <Link to="/agendar"><Button >Agenda</Button></Link>
+                    <Link to="/feed"><Button className="BtnBusca">Busca</Button></Link>
+                    <Link to="/agendar"><Button className="BtnAgenda" >Agenda</Button></Link>
                 </div>
 
             </div>
