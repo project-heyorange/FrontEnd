@@ -11,8 +11,6 @@ const Mentores = () => {
         <div className="container">
             <h2 className="MentoresTitle">Mentores Disponíveis: </h2>
             <CardMentor />
-            <CardMentor />
-            <CardMentor />
             
         </div>
      

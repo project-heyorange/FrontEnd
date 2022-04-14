@@ -12,6 +12,8 @@ import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 
+import Api from "../../services/api";
+
 
 
 
@@ -39,9 +41,8 @@ const Register = () => {
     }
 
     const handleSubmit = async (values) => {
-     //    Api.post("Rota de login no back", values).then(({data}) => {if(data == true){"Redireciona"}})
-
-        console.log(values)
+        // const new_user = await axios.post('https://heyorangedb.herokuapp.com/usuarios', values)      
+        // console.log(new_user)
         
         if (showRegister) {
             startSteps()
@@ -50,7 +51,8 @@ const Register = () => {
 
         if (step === 1) {
             await requestToBack()
-            console.log("Ultimo step ", values)
+            const new_user = await Api.post('/', values)      
+            console.log(new_user)
         }
 
         setStep(step => step + 1)

@@ -4,6 +4,8 @@ import "./Register.css"
 import { Link } from "react-router-dom"
 
 
+
+
 const Step3 = ({ }) => {
     const onFinish = () => {
         console.log('acabou')
