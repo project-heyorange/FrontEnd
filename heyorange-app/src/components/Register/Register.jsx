@@ -43,7 +43,12 @@ const Register = () => {
     const handleSubmit = async (values) => {
         // const new_user = await axios.post('https://heyorangedb.herokuapp.com/usuarios', values)      
         // console.log(new_user)
-        
+        values["habilidades"] = [values.habilidade1, values.habilidade2, values.habilidade3]
+        delete values.habilidade1
+        delete values.habilidade2
+        delete values.habilidade3
+        delete values.confirmPassword
+
         if (showRegister) {
             startSteps()
             return
@@ -51,8 +56,8 @@ const Register = () => {
 
         if (step === 1) {
             await requestToBack()
-            const new_user = await Api.post('/', values)      
-            console.log(new_user)
+            // const register = await Api.post('/', values)      
+            console.log(values)
         }
 
         setStep(step => step + 1)
@@ -100,7 +105,7 @@ const Register = () => {
         nivelExperiencia: string().required("Teste"),
         area: string().required("Teste"),
     }), object().shape({
-        habilidade1: string().required("Campo Obrigatório"),
+        habilidade1 : string().required("Campo Obrigatório"),
         habilidade2: string(),
         habilidade3: string(),
     }), object().shape({})]
@@ -119,7 +124,8 @@ const Register = () => {
                     area: "",
                     habilidade1: "",
                     habilidade2: "",
-                    habilidade3: ""
+                    habilidade3: "",
+            
                 }}
                 onSubmit={handleSubmit}
                 validationSchema={showRegister ? RegisterValidation : StepsValidation[step]}
