@@ -47,7 +47,7 @@ const Register = () => {
         delete values.habilidade1
         delete values.habilidade2
         delete values.habilidade3
-        delete values.confirmPassword
+        delete values.confirmarSenha
 
         if (showRegister) {
             startSteps()
@@ -69,15 +69,15 @@ const Register = () => {
                 Hey Orange!
             </h2>
             <h5 className="signin-subtitle">Crie sua conta para ter acesso aos melhores mentores.</h5>
-            <Input name="name" label="Nome" />
+            <Input name="nome" label="Nome" />
             <Input name="email" label="Email" />
-            <Input name="password" label="Senha" type="password" />
+            <Input name="senha" label="Senha" type="password" />
             <Input
-                name="confirmPassword"
+                name="confirmarSenha"
                 label="Confirmar Senha"
                 type="password"
             />
-            <Checkbox name="accepted" label="Eu concordo com os Termos de Uso" />
+            <Checkbox name="aceitar" label="Eu concordo com os Termos de Uso" />
             <div>
                 <Button className="CreateAccBtn"
                     disabled={!isValid}
@@ -90,15 +90,15 @@ const Register = () => {
     )
 
     const RegisterValidation = object().shape({
-        name: string().required("Campo obrigatório"),
+        nome: string().required("Campo obrigatório"),
         email: string()
             .required("Digite seu email")
             .email("Email inválido"),
-        password: string().min(2, "Pelo menos 2 caracteres").required("Campo Obrigatório"),
-        confirmPassword: string()
+        senha: string().min(2, "Pelo menos 2 caracteres").required("Campo Obrigatório"),
+        confirmarSenha: string()
             .required("Confirme sua senha")
-            .oneOf([ref("password")], "As senhas não conferem"),
-        accepted: bool().oneOf([true], 'Aceite os termos e condições'),
+            .oneOf([ref("senha")], "As senhas não conferem"),
+        aceitar: bool().oneOf([true], 'Aceite os termos e condições'),
     });
 
     const StepsValidation = [object().shape({
@@ -115,11 +115,11 @@ const Register = () => {
             <div className="Signup-image"></div>
             <Formik
                 initialValues={{
-                    name: "",
+                    nome: "",
                     email: "",
-                    password: "",
-                    confirmPassword: "",
-                    accepted: false,
+                    senha: "",
+                    confirmarSenha: "",
+                    aceitar: false,
                     nivelExperiencia: "",
                     area: "",
                     habilidade1: "",

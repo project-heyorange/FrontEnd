@@ -19,7 +19,7 @@ const CardMentor = () => {
     }, []);
 
     useEffect(() => {
-        console.log(users)
+        //console.log(users)
     }, [users])
 
 
@@ -33,7 +33,7 @@ const CardMentor = () => {
                             <Link className="LinkRota" to="/agendar">
                                 <CardBody className="CardBody">
                                     <CardText className="MentorName">
-                                        {user.name}
+                                        {user.nome}
                                     </CardText>
 
                                     <CardText className="MentorDetails">

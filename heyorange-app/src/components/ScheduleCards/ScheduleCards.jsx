@@ -6,9 +6,8 @@ import "./ScheduleCards.css"
 const ScheduleCards = () => {
     return (
         <div>
-
             {/* <Card className="container" color="light"> */}
-<CardBody className="body-container">
+            <CardBody className="body-container">
                 <Link className="LinkRota" to="/mentoria">
                 
                     <CardText className="row">
