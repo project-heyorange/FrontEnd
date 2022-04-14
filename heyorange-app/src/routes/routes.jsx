@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import Agendar from "../pages/Agendar";
-import Mentory from "../components/Mentory/Mentory";
 import Feed from "../pages/Feed/Feed";
 import Mentores from "../pages/Mentores";
+import Agendado from "../pages/Agendado/Agendado";
 
 // eslint-disable-next-line
 const Router = () => {
@@ -27,7 +27,7 @@ const Router = () => {
         <Route path={"/feed"} element={<Feed />} />
         <Route path={"/mentores"} element={<Mentores/>} />
         <Route path={"/agendar"} element={<Agendar/>} />
-        <Route path={"/mentoria"} element={<Mentory/>} />
+        <Route path={"/mentoria"} element={<Agendado/>} />
       </Routes>
     </BrowserRouter>
   );

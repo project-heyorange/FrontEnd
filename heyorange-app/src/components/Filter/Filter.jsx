@@ -22,7 +22,7 @@ const Filter = () => {
     }
 
 
-    const handleSubmit = async(values) => {
+    const handleSubmit = async (values) => {
         // Api.post("Rota de login no back", values).then(({data}) => {if(data == true){"Redireciona"}})
         await requestToBack()
         console.log(values)
@@ -35,7 +35,6 @@ const Filter = () => {
                 nivelExperiencia: "",
             }}
             onSubmit={handleSubmit}
-            loading={loading}
         >
             {() => {
                 return (
@@ -95,6 +94,7 @@ const Filter = () => {
                             <br />
                             <Link to="/mentores"><Button className="SearchBtn" type="submit" disabled={loading}>
                                 {loading ? "Carregando..." : "Realizar Busca"}
+                                
                             </Button></Link>
                         </Form>
                     </>
