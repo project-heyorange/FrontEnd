@@ -1,6 +1,7 @@
 import Header from "../../components/Header/Header";
 import "../Mentores/Mentores.css"
 import CardMentor from "../../components/CardMentor"
+import { Link } from "react-router-dom";
 
 
 const Mentores = () => {
@@ -9,6 +10,7 @@ const Mentores = () => {
     <div className = "MentoresWrapper">
         <div className="MentoresImg"></div>
         <div className="container">
+            <Link className="LinkVoltar" to="/feed">❮ Voltar</Link>
             <h2 className="MentoresTitle">Mentores Disponíveis: </h2>
             <CardMentor />
             

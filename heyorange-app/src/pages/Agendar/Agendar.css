@@ -43,3 +43,12 @@
     color: #3B3B3B;
     align-items: center;
 }
+
+.LinkVoltar {
+    font-weight: 700;
+    font-size: 18px;
+    color: #3B3B3B;
+    align-self: flex-start;
+    padding-left: 8%;
+    text-decoration: none;
+}

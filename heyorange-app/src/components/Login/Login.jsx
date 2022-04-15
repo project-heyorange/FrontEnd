@@ -13,7 +13,7 @@ const LoginValidation = object().shape({
     email: string()
         .required("Digite seu email")
         .email("Email inválido"),
-    password: string().min(8, "Pelo menos 8 caracteres").required("Campo Obrigatório"),
+    senha: string().min(8, "Pelo menos 8 caracteres").required("Campo Obrigatório"),
 });
 
 const Login = () => {
@@ -36,7 +36,7 @@ const Login = () => {
         <Formik
             initialValues={{
                 email: "",
-                password: "",
+                senha: "",
             }}
             onSubmit={handleSubmit}
             validationSchema={LoginValidation}
@@ -53,7 +53,7 @@ const Login = () => {
                         </h2>
                         <h5 className="Subtitle">A plataforma de mentoria do Grupo FCamara.</h5>
                         <Input name="email" label="Email" />
-                        <Input name="password" label="Senha" type="password" />
+                        <Input name="senha" label="Senha" type="password" />
                         <div>
                             <Button className="LogInBtn" outline type="submit">Entrar</Button>
                         </div>
