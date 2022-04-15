@@ -51,7 +51,7 @@ const Register = () => {
         delete values.habilidade2
         delete values.habilidade3
         delete values.confirmarSenha
-
+        console.log(values)
 
 
         if (showRegister) {

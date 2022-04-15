@@ -4,7 +4,7 @@ import "./Filter.css"
 import { FormGroup, Button } from "reactstrap";
 import { Formik, Form } from "formik";
 import Input from "../Input";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import Api from "../../services/api";
 
@@ -13,25 +13,26 @@ import Api from "../../services/api";
 
 const Filter = () => {
     const [redirectToMentores, setRedirectToMentores] = useState(false);
-
+    const navigation = useNavigate()
     const filtroMentor = (data, filtro) =>{
         var mentoresFiltrados  = []
         data.forEach(element => {
-            if(element.area == filtro.area && element.nivelExperiencia == filtro.nivelExperiencia)
+            if(element.area === filtro.area && element.nivelExperiencia === filtro.nivelExperiencia)
                 mentoresFiltrados = [...mentoresFiltrados, element];
         });
         return mentoresFiltrados;
     }
 
     const handleSubmit = (values) => {
-        Api.post("/usuarios", values).then(({data},values) => {
-            let mentores = filtroMentor(data,values)
-            setRedirectToMentores(!redirectToMentores)
-        })
+        // Api.post("/usuarios", values).then(({data},values) => {
+        //     let mentores = filtroMentor(data,values)
+        //     setRedirectToMentores(!redirectToMentores)
+        // })
+        navigation(`/mentores?area=${values.area}&nivelExperiencia=${values.nivelExperiencia}`)
         console.log(values)
     }
 
-    if(redirectToMentores) return <Navigate to="/mentores"/>
+    // if(redirectToMentores) return <Navigate to={`/mentores?area=${data.area}&nivelExperiencia=${data.nivelExperiencia}`}/>
 
     return (
         <Formik
