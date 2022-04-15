@@ -17,6 +17,10 @@
 
 ## :memo: Sobre o Projeto
 
+Este projeto foi desenvolvido durante o Hackaton do Programa de Formação da Fcamara, onde tivemos 15 dias para desenvolver esse MVP
+(Mínimo Produto Viável). O projeto foi desenvolvido em equipe com Designers e Desenvolvedores, onde a Joyce e a Isadora ficaram responsáveis pela parte do FrontEnd e o Alexandre e o Ruan, foram os responsáveis pelo BackEnd.
+
+O HeyOrange é uma plataforma de Mentorias, desenvolvida primeiramente para os funcionários da Fcamara, onde cada pessoas em diferentes níveis de experiências, podem se disponibilizar para mentorar ou buscar uma mentoria. A plataforma foi pensada para estreitar o contato de pessoas que estão em início de carreira e pessoas que já possuem mais experiência e que desejam ajudar outras pessoas.
 
 ## :floppy_disk: Tecnologias Utilizadas
 ![React](https://img.shields.io/badge/react-%23563D7C.svg?style=for-the-badge&logo=react&logoColor=white)
@@ -38,9 +42,9 @@
 
 
 ## :computer: Desenvolvedores
-|_Alexandre Lucca_|_Isadora Hoelscher_|_Joyce Caroline_|_Ruan Dias_|
-|---|---|---|---|
-|<img src="https://github.com/alexamorim17.png" width="140">|<img src="https://github.com/isahoelscher.png" width="140">|<img src="https://github.com/joyce-caroline.png" width="140">|<img src="https://github.com/ruandias.png" width="140">
+|_Isadora Hoelscher_|_Joyce Caroline_|
+|---|---|
+|<img src="https://github.com/isahoelscher.png" width="140">|<img src="https://github.com/joyce-caroline.png" width="140">|
   
 
 
