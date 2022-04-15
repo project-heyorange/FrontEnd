@@ -20,7 +20,7 @@
 
 ## :floppy_disk: Tecnologias Utilizadas
 ![React](https://img.shields.io/badge/react-%23563D7C.svg?style=for-the-badge&logo=react&logoColor=white)
-![Reactstrap](https://img.shields.io/badge/reactstrap-%23323330.svg?style=for-the-badge&logo=reactstrap&logoColor=%23F7DF1E)
+![Reactstrap](https://img.shields.io/badge/reactstrap-%23323330.svg?style=for-the-badge&logo=react&logoColor=%23F7DF1E)
   
 
 
