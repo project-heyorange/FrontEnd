@@ -1,9 +1,7 @@
 import React from "react";
-
 import Header from "../../components/Header/Header";
 import "./Agendado.css"
 import Mentory from "../../components/Mentory/Mentory";
-
 const Agendado = () => {
 
     return (

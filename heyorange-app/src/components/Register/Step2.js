@@ -24,11 +24,11 @@ const Step2 = ({ prevStep, loading }) => {
                     className="input"
                 />
             </FormGroup>
-            <Button className="PrevBtn" onClick={prevStep} disabled={loading}>
+            <Button className="PrevBtn" onClick={prevStep}>
                 Voltar
             </Button>
-            <Button className="NextBtn" type="submit" disabled={loading}>
-                {loading ? "Carregando..." : "Próximo"}
+            <Button className="NextBtn" type="submit">
+               Próximo
             </Button>
         </div>
     )

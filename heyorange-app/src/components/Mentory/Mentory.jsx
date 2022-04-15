@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { Card, CardBody, CardText, CardTitle, Button } from "reactstrap"
+import { Card, CardBody, CardTitle, Button } from "reactstrap"
 
 import "./Mentory.css"
 
@@ -15,28 +15,11 @@ const Mentory = () => {
                             <h5 className="MentoryTitle">Confirmado!</h5>
                         </CardTitle>
 
-                        <CardText>
-                            Sua Mentoria será em<br />
-                            18 DE ABRIL - SEGUNDA-FEIRA<br />
-                            16:30 - 17:00
-                        </CardText>
+                    <CardTitle>
+                        <h3>Mentoria Marcada com Sucesso!</h3>
+                    </CardTitle>
 
-                        <CardText>
-                            Você será mentorado(a) por
-                        </CardText>
-
-                        <div>
-
-                        </div>
-
-                        <CardText>
-                            Lara<br />
-                            UX Designer<br />
-                            Sênior<br />
-                            Research / Protórtipos / UI<br />
-                            anna@FCamara.com<br />
-
-                        </CardText>
+                    
                     </CardBody>
                 </Card>
                 <div className="botoes">

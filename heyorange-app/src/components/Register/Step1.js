@@ -1,4 +1,4 @@
-import { Button, FormGroup, Progress} from "reactstrap"
+import { Button, FormGroup} from "reactstrap"
 import React from "react"
 import RadioButton from "../RadioButton"
 import "./Register.css";

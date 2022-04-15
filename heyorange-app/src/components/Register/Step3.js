@@ -1,15 +1,12 @@
 import { Button } from "reactstrap"
 import React from "react"
 import "./Register.css"
-import { Link, Navigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 
 
 const Step3 = ({ }) => {
-    // const onFinish = () => {
-    //     return <Link to="/feed"/>
-    // }
     return (
         <div>
             

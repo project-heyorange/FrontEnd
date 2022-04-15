@@ -1,28 +1,11 @@
 import React from "react";
-import { useEffect, useState } from "react";
 import { Card, CardBody, CardText } from "reactstrap";
-import Api from "../../services/api";
 import "../CardMentor/Card.css"
 import { Link } from "react-router-dom";
 
 
 
-const CardMentor = () => {
-
-    const [users, setUsers] = useState([]);
-
-    useEffect(() => {
-        Api.get("/").then(({ data }) => {
-            setUsers([data])
-        })
-        // eslint-desable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    useEffect(() => {
-        
-    }, [users])
-
-
+const CardMentor = ({users}) => {
     return (
         <div>
             {users.length > 0 && (
@@ -44,7 +27,8 @@ const CardMentor = () => {
                                     </CardText>
 
                                     <CardText>
-                                        {user.habilidades}
+                                        {user.habilidades[0]}/{user.habilidades[1]}/{user.habilidades[2]}
+                                        
                                     </CardText>
 
                                 </CardBody></Link>

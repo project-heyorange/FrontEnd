@@ -1,6 +1,5 @@
 .DatesWrapper {
     box-sizing: border-box;
-    /* width: 90vw; */
     height: 100vh;
     background-color:  #FBFBFB !important;
     display: flex;
