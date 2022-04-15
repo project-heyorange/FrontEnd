@@ -17,7 +17,7 @@
 
 ## :memo: Sobre o Projeto
 
-Este projeto foi desenvolvido durante o Hackaton do Programa de Formação da Fcamara, onde tivemos 15 dias para desenvolver esse MVP
+Este projeto foi desenvolvido durante o Hackaton do Programa de Formação da FCamara, onde tivemos 15 dias para desenvolver esse MVP
 (Mínimo Produto Viável). O projeto foi desenvolvido em equipe com Designers e Desenvolvedores, onde a Joyce e a Isadora ficaram responsáveis pela parte do FrontEnd e o Alexandre e o Ruan, foram os responsáveis pelo BackEnd.
 
 O HeyOrange é uma plataforma de Mentorias, desenvolvida primeiramente para os funcionários da Fcamara, onde cada pessoas em diferentes níveis de experiências, podem se disponibilizar para mentorar ou buscar uma mentoria. A plataforma foi pensada para estreitar o contato de pessoas que estão em início de carreira e pessoas que já possuem mais experiência e que desejam ajudar outras pessoas.
@@ -36,9 +36,23 @@ O HeyOrange é uma plataforma de Mentorias, desenvolvida primeiramente para os f
 
 
 ## :pushpin: Como utilizar o projeto
-  *Colocar prints de comandos, pra melhor visualização
+  ```
+  # Clone o repositório
   
+  git clone https://github.com/project-heyorange/FrontEnd.git
+  
+  # Acesse a pasta do projeto 
+  # Rode o comando npm install no terminal dentro da pasta do projeto
+  
+  npm install
 
+   # Após as instalações das dependências
+  # Rode o comando npm start para rodar o projeto
+  
+  npm start
+  
+  #O site será aberto no seu navegador.
+  ```
 
 
 ## :computer: Desenvolvedores
