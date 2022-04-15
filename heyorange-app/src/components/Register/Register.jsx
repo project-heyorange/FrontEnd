@@ -43,7 +43,7 @@ const Register = () => {
     const handleSubmit = async (values) => {
         // const new_user = await axios.post('https://heyorangedb.herokuapp.com/usuarios', values)      
         // console.log(new_user)
-        values["habilidades"] = [values.habilidade1, values.habilidade2, values.habilidade3]
+        values["habilidade"] = [values.habilidade1, values.habilidade2, values.habilidade3]
         delete values.habilidade1
         delete values.habilidade2
         delete values.habilidade3
