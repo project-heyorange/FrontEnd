@@ -30,7 +30,7 @@ O HeyOrange é uma plataforma de Mentorias, desenvolvida primeiramente para os f
 
 
 ## :bulb: Funcionalidades
-  A primeira tela na qual o usuário tem contato, tem a opção de Login e na mesma página a pessoa pode ser redirecionada para a página de Casdatro, onde ela irá adicionar algumas informações referentes á sua área de atuação (Design ou Desenvolvedor) e o seu nível de experiência(Trainee, Júnior, Pleno ou Sênior). Partindo do pressuposto que até mesmo uma pessoa que esteja em nível Trainee, se disponha para dar mentoria para ajudar quem está iniciando a carreira, todo e qualquer usuário pode ser tanto Mentor, quanto mentorado.
+  A primeira tela na qual o usuário tem contato, tem a opção de Login e na mesma página a pessoa pode ser redirecionada para a página de Cadastro, onde ela irá adicionar algumas informações referentes á sua área de atuação (Design ou Desenvolvedor) e o seu nível de experiência(Trainee, Júnior, Pleno ou Sênior). Partindo do pressuposto que até mesmo uma pessoa que esteja em nível Trainee, se disponha para dar mentoria para ajudar quem está iniciando a carreira, todo e qualquer usuário pode ser tanto Mentor, quanto mentorado.
   Na página Inicial, após feito o cadastro ou o login, o usuário poderá utilizar um filtro para encontrar um mentor de acordo com a área de Atuação e Experiência, ele poderá escolher o mentor e logo após selecionará um horário para ocorrer essa mentoria, no final do processo, receberá a confirmação de Marcação da Mentoria.
 
 
