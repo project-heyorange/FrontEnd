@@ -25,6 +25,9 @@ O HeyOrange é uma plataforma de Mentorias, desenvolvida primeiramente para os f
 ## :floppy_disk: Tecnologias Utilizadas
 ![React](https://img.shields.io/badge/react-%23563D7C.svg?style=for-the-badge&logo=react&logoColor=white)
 ![Reactstrap](https://img.shields.io/badge/reactstrap-%23323330.svg?style=for-the-badge&logo=react&logoColor=%23F7DF1E)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
   
 
 
@@ -52,6 +55,7 @@ O HeyOrange é uma plataforma de Mentorias, desenvolvida primeiramente para os f
   npm start
   
   #O site será aberto no seu navegador.
+  #Observação: Você precisa já estar com o BackEnd rodando localmente na sua máquina para poder usar a plataforma.
   ```
 
 
