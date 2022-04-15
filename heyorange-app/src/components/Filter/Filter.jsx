@@ -6,7 +6,7 @@ import { Formik, Form } from "formik";
 import Input from "../Input";
 import { Navigate } from "react-router-dom";
 
-// import Api from "../../services/api";
+import Api from "../../services/api";
 
 
 
@@ -14,10 +14,21 @@ import { Navigate } from "react-router-dom";
 const Filter = () => {
     const [redirectToMentores, setRedirectToMentores] = useState(false);
 
-    const handleSubmit = async (values) => {
-        // Api.post("Rota de login no back", values).then(({data}) => {if(data == true){"Redireciona"}})
+    const filtroMentor = (data, filtro) =>{
+        var mentoresFiltrados  = []
+        data.forEach(element => {
+            if(element.area == filtro.area && element.nivelExperiencia == filtro.nivelExperiencia)
+                mentoresFiltrados = [...mentoresFiltrados, element];
+        });
+        return mentoresFiltrados;
+    }
+
+    const handleSubmit = (values) => {
+        Api.post("/usuarios", values).then(({data},values) => {
+            let mentores = filtroMentor(data,values)
+            setRedirectToMentores(!redirectToMentores)
+        })
         console.log(values)
-        setRedirectToMentores(!redirectToMentores)
     }
 
     if(redirectToMentores) return <Navigate to="/mentores"/>

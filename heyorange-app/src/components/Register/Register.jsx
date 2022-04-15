@@ -14,6 +14,8 @@ import Step3 from "./Step3";
 
 import Api from "../../services/api";
 
+import { Navigate } from "react-router-dom";
+
 
 
 
@@ -21,6 +23,9 @@ const Register = () => {
     const [showRegister, setShowRegister] = useState(true)
     const [step, setStep] = useState(0)
     const [loading, setLoading] = useState(false)
+    const [redirectToFeed, setredirectToFeed] = useState(false)
+
+    if(redirectToFeed){return <Navigate to="/feed"/>}
 
     const backToRegister = () => {
         setShowRegister(true)
@@ -40,14 +45,14 @@ const Register = () => {
         setLoading(false)
     }
 
-    const handleSubmit = async (values) => {
-        // const new_user = await axios.post('https://heyorangedb.herokuapp.com/usuarios', values)      
-        // console.log(new_user)
+    const handleSubmit = (values) => {
         values["habilidade"] = [values.habilidade1, values.habilidade2, values.habilidade3]
         delete values.habilidade1
         delete values.habilidade2
         delete values.habilidade3
         delete values.confirmarSenha
+
+
 
         if (showRegister) {
             startSteps()
@@ -55,9 +60,10 @@ const Register = () => {
         }
 
         if (step === 1) {
-            await requestToBack()
-            // const register = await Api.post('/', values)      
-            console.log(values)
+            Api.post("/usuarios", values).then((response) => {
+                if (response.status == 200)
+                 setredirectToFeed(!redirectToFeed)  
+            })
         }
 
         setStep(step => step + 1)
@@ -105,7 +111,7 @@ const Register = () => {
         nivelExperiencia: string().required("Teste"),
         area: string().required("Teste"),
     }), object().shape({
-        habilidade1 : string().required("Campo Obrigatório"),
+        habilidade1: string().required("Campo Obrigatório"),
         habilidade2: string(),
         habilidade3: string(),
     }), object().shape({})]
@@ -125,7 +131,7 @@ const Register = () => {
                     habilidade1: "",
                     habilidade2: "",
                     habilidade3: "",
-            
+
                 }}
                 onSubmit={handleSubmit}
                 validationSchema={showRegister ? RegisterValidation : StepsValidation[step]}
