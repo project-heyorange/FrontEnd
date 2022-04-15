@@ -18,7 +18,18 @@
     display: flex;
 }
 
-.container {
+@media (max-width: 700px) {
+    .MentoresContainer {
+       margin-left: 50px !important;
+    }
+
+    .MentoresImg {
+        display: none;
+    }
+    
+}
+
+.MentoresContainer {
     max-width: 384px !important;
     min-height: 100vh !important;
     margin-right: 200px !important;

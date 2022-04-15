@@ -9,7 +9,7 @@ const Mentores = () => {
     <Header />
     <div className = "MentoresWrapper">
         <div className="MentoresImg"></div>
-        <div className="container">
+        <div className="MentoresContainer">
             <Link className="LinkVoltar" to="/feed">❮ Voltar</Link>
             <h2 className="MentoresTitle">Mentores Disponíveis: </h2>
             <CardMentor />

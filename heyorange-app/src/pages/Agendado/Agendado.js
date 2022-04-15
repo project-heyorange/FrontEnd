@@ -11,7 +11,7 @@ const Agendado = () => {
             <Header />
             <div className="DatesWrapper">
                 <div className="ScheduleImg"></div>
-                <div className="container">
+                <div className="DatesContainer">
                     <h2 className="AgendadoTitle">Uhuuuuuu!  </h2>
                     <Mentory/>
                 </div>

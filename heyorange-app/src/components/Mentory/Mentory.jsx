@@ -12,7 +12,7 @@ const Mentory = () => {
                 <Card className="container-card">
                     <CardBody className="ScheduleContainer">
                         <CardTitle>
-                            <h5>Confirmado!</h5>
+                            <h5 className="MentoryTitle">Confirmado!</h5>
                         </CardTitle>
 
                         <CardText>

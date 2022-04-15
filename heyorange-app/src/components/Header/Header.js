@@ -11,7 +11,7 @@ const Header = () => {
             <CardHeader className="Header">
                 {/* <Nav className="HeaderItems"> */}
                     <NavItem className="ProfileName">
-                        <h5 className="ProfileTitle"> 👤 Olá Eduardo</h5>
+                        <h5 className="ProfileTitle"> Olá Usuário</h5>
                     </NavItem>
 
                     <NavItem className="header-links">
