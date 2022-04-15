@@ -16,9 +16,9 @@ const Step3 = ({ }) => {
             <h2 className="Title-Signup">Hey Orange! <br/></h2>
                 <h3><strong>Cadastro Realizado com Sucesso!</strong></h3>
             
-                <Link to="/feed"><Button className="CreateAccBtn" onClick={onFinish}>
+                <Button className="CreateAccBtn" onClick={onFinish}>
                     Concluir 
-                </Button></Link>
+                </Button>
         </div>
     )
 }

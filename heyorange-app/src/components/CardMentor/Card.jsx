@@ -19,9 +19,8 @@ const CardMentor = () => {
     }, []);
 
     useEffect(() => {
-        //console.log(users)
+        
     }, [users])
-
 
 
     return (
