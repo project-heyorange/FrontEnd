@@ -1,13 +1,10 @@
-import React, {useState} from "react";
-
-import Api from "../../services/api";
-
+import React from "react";
 import { Formik, Form } from "formik"
 import { object, string } from "yup";
 import { Button } from "reactstrap";
 import "./login.css";
 import Input from "../Input";
-import { Link,Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const LoginValidation = object().shape({
     email: string()
@@ -17,19 +14,11 @@ const LoginValidation = object().shape({
 });
 
 const Login = () => {
-    const [redirectToFeed, setRedirectToFeed] = useState(false);
-    const requestToBack = async () => {
-        await new Promise(resolve => setTimeout(resolve, 5000));
-    }
     
-    const handleSubmit = async (values) => {
-        setRedirectToFeed(!redirectToFeed)
-        const new_user = await Api.post('/', values)      
-        console.log(values)
+    const handleSubmit = async (values) => { 
+        console.log()
         
     }
-
-    if(redirectToFeed == true) return <Navigate to="/feed"/>
 
 
     return (
@@ -55,7 +44,7 @@ const Login = () => {
                         <Input name="email" label="Email" />
                         <Input name="senha" label="Senha" type="password" />
                         <div>
-                            <Button className="LogInBtn" outline type="submit">Entrar</Button>
+                            <Link to="/feed"> <Button className="LogInBtn" outline type="submit">Entrar</Button></Link>
                         </div>
                         <a href="/" target="_blank"><center><br/>Esqueceu a senha?</center></a>
                         <hr />

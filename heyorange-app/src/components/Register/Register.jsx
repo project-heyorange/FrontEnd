@@ -1,22 +1,14 @@
 import React, { useState } from "react"
-
 import "./Register.css"
-
 import { Formik, Form } from "formik"
 import { object, string, ref, bool } from "yup";
 import Input from "../Input";
 import { Button, Progress } from "reactstrap"
 import Checkbox from "../Checkbox";
-
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
-
 import Api from "../../services/api";
-
-import { Navigate } from "react-router-dom";
-
-
 
 
 const Register = () => {
@@ -51,7 +43,6 @@ const Register = () => {
         delete values.habilidade2
         delete values.habilidade3
         delete values.confirmarSenha
-        console.log(values)
 
 
         if (showRegister) {
@@ -100,7 +91,7 @@ const Register = () => {
         email: string()
             .required("Digite seu email")
             .email("Email inválido"),
-        senha: string().min(2, "Pelo menos 2 caracteres").required("Campo Obrigatório"),
+        senha: string().min(8, "Pelo menos 8 caracteres").required("Campo Obrigatório"),
         confirmarSenha: string()
             .required("Confirme sua senha")
             .oneOf([ref("senha")], "As senhas não conferem"),

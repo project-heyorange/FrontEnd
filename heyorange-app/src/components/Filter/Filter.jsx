@@ -1,38 +1,16 @@
-import React, {useState } from "react";
+import React from "react";
 
 import "./Filter.css"
 import { FormGroup, Button } from "reactstrap";
 import { Formik, Form } from "formik";
 import Input from "../Input";
-import { Navigate, useNavigate } from "react-router-dom";
-
-import Api from "../../services/api";
-
-
-
+import { useNavigate } from "react-router-dom";
 
 const Filter = () => {
-    const [redirectToMentores, setRedirectToMentores] = useState(false);
     const navigation = useNavigate()
-    const filtroMentor = (data, filtro) =>{
-        var mentoresFiltrados  = []
-        data.forEach(element => {
-            if(element.area === filtro.area && element.nivelExperiencia === filtro.nivelExperiencia)
-                mentoresFiltrados = [...mentoresFiltrados, element];
-        });
-        return mentoresFiltrados;
-    }
-
     const handleSubmit = (values) => {
-        // Api.post("/usuarios", values).then(({data},values) => {
-        //     let mentores = filtroMentor(data,values)
-        //     setRedirectToMentores(!redirectToMentores)
-        // })
-        navigation(`/mentores?area=${values.area}&nivelExperiencia=${values.nivelExperiencia}`)
-        console.log(values)
+        navigation(`/mentores?area=${values.area.toLowerCase()}&nivelExperiencia=${values.nivelExperiencia.toLowerCase()}`)
     }
-
-    // if(redirectToMentores) return <Navigate to={`/mentores?area=${data.area}&nivelExperiencia=${data.nivelExperiencia}`}/>
 
     return (
         <Formik
@@ -83,16 +61,16 @@ const Filter = () => {
                                     <option value="" disabled>
                                         Experiência
                                     </option>
-                                    <option value="Trainee">
+                                    <option value="trainee">
                                         Trainee
                                     </option>
-                                    <option value="Junior">
+                                    <option value="junior">
                                         Júnior
                                     </option>
-                                    <option value="Pleno">
+                                    <option value="pleno">
                                         Pleno
                                     </option>
-                                    <option value="Sênior">
+                                    <option value="senior">
                                         Sênior
                                     </option>
                                 </Input>

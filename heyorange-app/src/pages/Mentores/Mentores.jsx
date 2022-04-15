@@ -1,29 +1,25 @@
 import Header from "../../components/Header/Header";
 import "../Mentores/Mentores.css"
 import CardMentor from "../../components/CardMentor"
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Api from "../../services/api";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import useQuery from "../../hooks/useQuery";
 
 
 const Mentores = () => {
-    const location = useLocation()
-    const filtroMentor = (data, filtro) =>{
-        var mentoresFiltrados  = []
-        data.forEach(element => {
-            if(element.area === filtro.area && element.nivelExperiencia === filtro.nivelExperiencia)
-                mentoresFiltrados = [...mentoresFiltrados, element];
-        });
-        return mentoresFiltrados;
-    }
+    const query = useQuery()
+    const [mentores, setMentores]=useState([])
     const handleSubmit = () => {
-        const area = location.search.area
-        const nivelExperiencia = location.search.nivelExperiencia
+        const area = query.get("area")
+        const nivelExperiencia = query.get("nivelExperiencia")
         
         Api.get("/usuarios", {area, nivelExperiencia}).then(({data}) => {
-            console.log(data)
-            let mentores = filtroMentor(data,{area, nivelExperiencia})
-            console.log(mentores)
+            const mentores = data.filter(user => {
+                return user.area ===area && user.nivelExperiencia ===nivelExperiencia
+            })
+            setMentores(mentores)
+
         })
         
     }
@@ -35,7 +31,7 @@ const Mentores = () => {
         <div className="MentoresContainer">
             <Link className="LinkVoltar" to="/feed">❮ Voltar</Link>
             <h2 className="MentoresTitle">Mentores Disponíveis: </h2>
-            <CardMentor />
+            <CardMentor users={mentores}/>
             
         </div>
      

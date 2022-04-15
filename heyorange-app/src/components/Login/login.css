@@ -4,8 +4,6 @@
 }
 
 .image {
-    /* display: flex;
-    align-items: flex-start; */
     width: 584px;
     min-height: 100vh;
     background-image: url(../assets/Desktop\ -\ Imagem\ 1.svg);

@@ -10,15 +10,11 @@ const Agendar = () => {
   <div className = "DatesWrapper">
         <div className="DatesImg"></div>
         <div className="container">
-            <Link className="LinkVoltar" to="/mentores">❮ Voltar</Link>
+            <Link className="LinkVoltar" to="/feed">❮ Voltar</Link>
             <h2 className="DatesTitle">Datas Disponíveis: </h2>
-            {/* <CardMentor />
-            <CardMentor />
-            <CardMentor /> */}
             <ScheduleCards />
             
         </div>
-     
     </div>
   
   </>
