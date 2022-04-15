@@ -10,6 +10,7 @@
     padding-top: 5vh;
     padding-bottom: 5vh;   
     text-align: center;
+    box-shadow: 0 0 10px gray;
 }
 
 .container-mentoria{
@@ -17,6 +18,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.MentoryTitle {
+    font-weight: 700;
+    font-size: 24px;
 }
 
 .botoes {

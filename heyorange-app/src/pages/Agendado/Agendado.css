@@ -23,9 +23,13 @@
     .ScheduleImg {
       display: none;
     }
+
+    .DatesContainer {
+        margin-left: 50px !important;
+    }
 }
 
-.container {
+.DatesContainer {
     max-width: 500px !important;
     min-height: 100vh !important;
     margin-right: 10% !important;
@@ -42,5 +46,4 @@
     font-size: 24px;
     color: #3B3B3B;
     align-self: flex-start;
-    margin-left: 20%;
 }

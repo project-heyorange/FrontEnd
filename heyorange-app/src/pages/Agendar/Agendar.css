@@ -23,6 +23,10 @@
       display: none;
     }
 
+    .container {
+        margin-left: 108px !important;
+    }
+
 }
 
 .container {

@@ -1,7 +1,9 @@
 import React from "react";
 import {CardBody, CardText } from "reactstrap";
-import {Link} from "react-router-dom"
-import "./ScheduleCards.css"
+import {Link} from "react-router-dom";
+import "./ScheduleCards.css";
+import { BsClock } from 'react-icons/bs';
+
 
 const ScheduleCards = () => {
     return (
@@ -16,7 +18,7 @@ const ScheduleCards = () => {
                         </div>
                         <div className="col-6">
                             <strong className="row">Anna</strong>
-                            <span className="hora">🕒 14:00 - 14:30</span>
+                            <span className="hora"><BsClock /> 14:00 - 14:30</span>
                         </div>
                     </CardText>
               </Link>   </CardBody>
@@ -34,7 +36,7 @@ const ScheduleCards = () => {
                         </div>
                         <div className="col-6">
                             <strong className="row">Anna</strong>
-                            <span className="hora">🕒 15:00 - 15:30</span>
+                            <span className="hora"><BsClock /> 15:00 - 15:30</span>
                         </div>
                     </CardText>
                 </Link>    
@@ -48,7 +50,7 @@ const ScheduleCards = () => {
                         </div>
                         <div className="col-6">
                             <strong className="row">Anna</strong>
-                            <span className="hora">🕒 16:00 - 16:30</span>
+                            <span className="hora"><BsClock /> 16:00 - 16:30</span>
                         </div>
                     </CardText>
                 </Link>    

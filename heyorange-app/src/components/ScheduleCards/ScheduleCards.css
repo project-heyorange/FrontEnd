@@ -27,6 +27,7 @@
     height: 92px !important;
     width: 384px !important;
     margin-bottom: 32px !important;
+    transition: 1s ease-out;
 }
 
 .LinkRota a {
