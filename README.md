@@ -3,18 +3,6 @@
 
 <img src = "https://cdn.discordapp.com/attachments/958876722193895484/964352798487638026/Captura_de_tela_de_2022-04-14_23-12-23.png" alt="Layout do Projeto">
 
-
-## :mega: Sumário
-<div>
-  <a>1. Sobre o Projeto</a>  
-  
-  <a>2. Tecnologias Utilizadas</a>  
-  <a>3. Funcionalidades</a>  
-  <a>4. Como utilizar</a>   
-  <a>5. Autores</a>
-</div>
-
-
 ## :memo: Sobre o Projeto
 
 Este projeto foi desenvolvido durante o Hackaton do Programa de Formação da FCamara, onde tivemos 15 dias para desenvolver esse MVP
