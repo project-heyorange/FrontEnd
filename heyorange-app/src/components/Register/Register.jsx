@@ -25,7 +25,7 @@ const Register = () => {
     const [loading, setLoading] = useState(false)
     const [redirectToFeed, setredirectToFeed] = useState(false)
 
-    if(redirectToFeed){return <Navigate to="/feed"/>}
+    
 
     const backToRegister = () => {
         setShowRegister(true)
