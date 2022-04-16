@@ -30,7 +30,7 @@ const Filter = () => {
                         >
 
                             <FormGroup>
-                                <h2 className="FilterTitle">Hey Eduardo!</h2>
+                                <h2 className="FilterTitle">Hey Usuário!</h2>
                                 <h5 className="FilterSubtitle">Seja muito bem-vindo a plataforma de mentoria do grupo FCamara.</h5>
 
                                 <h5 className="FilterPhrase">Encontre um mentor: </h5>
